@@ -18,6 +18,7 @@
     <string name="txt_i_agree">Acepto</string>
     <string name="txt_remember_user">Recordar Usuario</string>
     <string name="txt_log_in">INICIO DE SESION</string>
+    <string name="txt_dont_user">No tienes un usuario? Registrate presionando el botón</string>
 
     <string name="label_sign_in">REGISTRO</string>
     <string name="label_log_in">INICIAR SESION</string>
