@@ -16,7 +16,7 @@ public class FormularioRegistro extends AppCompatActivity {
     LinearLayout CONTE;
     Button B1, B2;
     Fragment FRAG;
-    EditText E1,E2,E3,P,Pc;
+    EditText E1,E2,E3,E4,E5,E6,E7,P,Pc;
     TextView T1;
     DatabaseHelper DB;
 
@@ -31,6 +31,10 @@ public class FormularioRegistro extends AppCompatActivity {
         E1=(EditText)findViewById(R.id.e1);
         E2=(EditText)findViewById(R.id.e2);
         E3=(EditText)findViewById(R.id.e3);
+        E4=(EditText)findViewById(R.id.e4);
+        E5=(EditText)findViewById(R.id.e5);
+        E6=(EditText)findViewById(R.id.e6);
+        E7=(EditText)findViewById(R.id.e7);
         T1=(TextView) findViewById(R.id.testado);
         DB=new DatabaseHelper(this);
     }
@@ -72,8 +76,8 @@ public class FormularioRegistro extends AppCompatActivity {
     }
 
     public void crearUsuario(View view) {
-        String nombre,apellido,telefono;
-        int v1,v2,v3;
+        String nombre,apellido,telefono,usuario,contrasena,correo;
+        int v1,v2,v3,v4,v5,v6,v7;
 
         nombre=E1.getText().toString();
         v1=validarCaracteres(1,nombre);
@@ -84,7 +88,16 @@ public class FormularioRegistro extends AppCompatActivity {
         telefono=E3.getText().toString();
         v3=validarCaracteres(2,telefono);
 
-        if (v1!=1 || v2!=1 || v3!=1)
+        usuario=E4.getText().toString();
+        v4=validarCaracteres(1,usuario);
+
+        contrasena=E5.getText().toString();
+        v5=validarCaracteres(1,contrasena);
+
+        correo=E6.getText().toString();
+        v6=validarCaracteres(1,correo);
+
+        if (v1!=1 || v2!=1 || v3!=1 || v4!=1 || v5!=1 || v6!=1)
         {
             //no se creará el usuario
             T1.setText("error");
@@ -94,7 +107,7 @@ public class FormularioRegistro extends AppCompatActivity {
             //crear un usuario nuevo
             //T1.setText("ok");
             //guardar datos
-            if(DB.insertData(nombre,apellido,telefono));
+            if(DB.insertData(nombre,apellido,telefono,usuario,contrasena,correo));
             {
                 T1.setText("Registro Exitoso");
             }

@@ -15,6 +15,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public final static String COL_2="NOMBRE";
     public final static String COL_3="APELLIDO";
     public final static String COL_4="TELEFONO";
+    public final static String COL_5="USUARIO";
+    public final static String COL_6="CONTRASENA";
+    public final static String COL_7="CORREO";
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -32,13 +35,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(String nombre,String apellido,String telefono)
+    public boolean insertData(String nombre,String apellido,String telefono,String usuario,String contrasena,String correo)
     {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
         cv.put(COL_2,nombre);
         cv.put(COL_3,apellido);
         cv.put(COL_4,telefono);
+        cv.put(COL_5,usuario);
+        cv.put(COL_6,contrasena);
+        cv.put(COL_7,correo);
         long result=db.insert(TABLE_NAME,null,cv);
         if(result==-1)
         {
@@ -57,13 +63,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public boolean upDateData(String id, String nombre, String apellido, String telefono)
+    public boolean upDateData(String id, String nombre, String apellido, String telefono, String usuario, String contrasena, String correo)
     {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
         cv.put(COL_2,nombre);
         cv.put(COL_3,apellido);
         cv.put(COL_4,telefono);
+        cv.put(COL_5,usuario);
+        cv.put(COL_6,contrasena);
+        cv.put(COL_7,correo);
         long result=db.update(TABLE_NAME,cv,"ID=?",new String[]{id});
         if(result==-1)
         {
