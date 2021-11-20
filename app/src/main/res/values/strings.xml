@@ -8,6 +8,7 @@
     <string name="datos1">Esta aplicación fue creada con fines educativos, no manejamos datos ni nos hacemos responsables del mal uso de los mismos.</string>
     <string name="datos2">Los derechos de las imagenes perteneces exclusivamente a sus creadores.</string>
 
+    <string name="txt_user">Usuario</string>
     <string name="txt_name">Nombre</string>
     <string name="txt_last_name">Apellido</string>
     <string name="txt_phone">Teléfono</string>
@@ -15,11 +16,15 @@
     <string name="txt_password_confirm">Confirme Contraseña</string>
     <string name="txt_usage_policies">Antes de continuar debe aceptar nuestras políticas de uso</string>
     <string name="txt_i_agree">Acepto</string>
+    <string name="txt_remember_user">Recordar Usuario</string>
+    <string name="txt_log_in">INICIO DE SESION</string>
 
     <string name="label_sign_in">REGISTRO</string>
+    <string name="label_log_in">INICIAR SESION</string>
 
     <string name="bt_policies">POLITICAS</string>
     <string name="bt_sign_in">REGISTRARME</string>
+    <string name="bt_log_in">INICIAR SESION</string>
 
     <string name="frag2">Desarrollo de aplicaciones móviles Grupo 9, Equipo 2</string>
 

@@ -10,11 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeptimaAppJava">
         <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".FormularioRegistro"
             android:exported="false"
             android:label="REGISTRO"
-            android:theme="@style/Theme.SeptimaAppJava"
-            />
+            android:theme="@style/Theme.SeptimaAppJava" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
