@@ -15,6 +15,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Bini=(Button) findViewById(R.id.inicio_boton_log_in);
+        Breg=(Button) findViewById(R.id.inicio_bonton_sign_in);
     }
 
     public void iniciarSesion(View view) {
