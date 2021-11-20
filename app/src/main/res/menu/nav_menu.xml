@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/op1nav"
+        android:icon="@drawable/ic_usuario"
+        android:title="Crear Usuario"/>
+
+    <item
+        android:id="@+id/op2nav"
+        android:icon="@drawable/ic_comprar"
+        android:title="Comprar"/>
+
 </menu>
