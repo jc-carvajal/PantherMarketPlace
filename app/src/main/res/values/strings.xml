@@ -21,6 +21,9 @@
     <string name="txt_dont_user">No tienes un usuario? Registrate presionando el botón</string>
     <string name="txt_email">Correo@mail.com</string>
 
+    <string name="msg_error_user_pass">Error de usuario o contraseña</string>
+    <string name="msg_error_user_pass2">Error de usuario o contraseña 2</string>
+
     <string name="label_sign_in">REGISTRO</string>
     <string name="label_log_in">INICIAR SESION</string>
 
