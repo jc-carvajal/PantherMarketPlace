@@ -9,15 +9,21 @@ import android.support.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public final static String DATABASE_NAME="DB_PRUEBA";
-    public final static String TABLE_NAME="TABLA1";
-    public final static String COL_1="ID";
-    public final static String COL_2="NOMBRE";
-    public final static String COL_3="APELLIDO";
-    public final static String COL_4="TELEFONO";
-    public final static String COL_5="USUARIO";
-    public final static String COL_6="CONTRASENA";
-    public final static String COL_7="CORREO";
+    public final static String DATABASE_NAME="DB_GRUPO9";
+    public final static String TABLE1_NAME="USUARIOS";
+    public final static String COL1_1="ID";
+    public final static String COL2_1="USUARIO";
+    public final static String COL3_1="PASSWORD";
+    public final static String COL4_1="NOMBRE";
+    public final static String COL5_1="APELLIDO";
+    public final static String COL6_1="TELEFONO";
+    public final static String COL7_1="CORREO";
+
+    public final static String TABLE2_NAME="COMPRAS";
+    public final static String COL1_2="ID";
+    public final static String COL2_2="USUARIO";
+    public final static String COL3_2="ARTICULO";
+    public final static String COL4_2="CANTIDAD";
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -25,27 +31,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE_NAME+"(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "NOMBRE TEXT,APELLIDO TEXT,TELEFONO INTEGER)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE1_NAME+"(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "USUARIO TEXT,PASSWORD TEXT,NOMBRE TEXT,APELLIDO TEXT,TELEFONO INTEGER,CORREO TEXT)");
+
+        db.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE2_NAME+"(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "USUARIO TEXT,ARTICULO TEXT,CANTIDAD INTEGER)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE1_NAME);
+        onCreate(db);
+
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE2_NAME);
         onCreate(db);
     }
 
-    public boolean insertData(String nombre,String apellido,String telefono,String usuario,String contrasena,String correo)
+    public boolean insertData(String usuario,String password,String nombre,String apellido,String telefono,String correo)
     {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
-        cv.put(COL_2,nombre);
-        cv.put(COL_3,apellido);
-        cv.put(COL_4,telefono);
-        cv.put(COL_5,usuario);
-        cv.put(COL_6,contrasena);
-        cv.put(COL_7,correo);
-        long result=db.insert(TABLE_NAME,null,cv);
+        cv.put(COL2_1,usuario);
+        cv.put(COL3_1,password);
+        cv.put(COL4_1,nombre);
+        cv.put(COL5_1,apellido);
+        cv.put(COL6_1,telefono);
+        cv.put(COL7_1,correo);
+        long result=db.insert(TABLE1_NAME,null,cv);
         if(result==-1)
         {
             return false;
@@ -54,26 +66,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         {
             return true;
         }
+    }
+
+    public Cursor getDataUsuario(String usuario)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        Cursor cursor=db.rawQuery("SELECT *FROM "+TABLE1_NAME+" WHERE USUARIO='"+usuario+"'",null);
+        return cursor;
     }
 
     public Cursor getData(String id)
     {
         SQLiteDatabase db=this.getWritableDatabase();
-        Cursor cursor=db.rawQuery("SELECT *FROM "+TABLE_NAME+" WHERE ID='"+id+"'",null);
+        Cursor cursor=db.rawQuery("SELECT *FROM "+TABLE1_NAME+" WHERE ID='"+id+"'",null);
         return cursor;
     }
 
-    public boolean upDateData(String id, String nombre, String apellido, String telefono, String usuario, String contrasena, String correo)
+    public boolean upDateData(String id, String usuario,String password,String nombre,String apellido,String telefono,String correo)
     {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
-        cv.put(COL_2,nombre);
-        cv.put(COL_3,apellido);
-        cv.put(COL_4,telefono);
-        cv.put(COL_5,usuario);
-        cv.put(COL_6,contrasena);
-        cv.put(COL_7,correo);
-        long result=db.update(TABLE_NAME,cv,"ID=?",new String[]{id});
+        //cv.put(COL2_1,usuario);
+        cv.put(COL3_1,password);
+        cv.put(COL4_1,nombre);
+        cv.put(COL5_1,apellido);
+        cv.put(COL6_1,telefono);
+        cv.put(COL7_1,correo);
+        long result=db.update(TABLE1_NAME,cv,"USUARIO=?",new String[]{usuario});
         if(result==-1)
         {
             return false;
@@ -83,10 +102,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
     }
-    public boolean deleteData(String id)
+    public boolean deleteData(String usuario)
     {
         SQLiteDatabase db=this.getWritableDatabase();
-        long result=db.delete(TABLE_NAME,"ID=?",new String[]{id});
+        long result=db.delete(TABLE1_NAME,"USUARIO=?",new String[]{usuario});
         if(result==-1)
         {
             return false;
