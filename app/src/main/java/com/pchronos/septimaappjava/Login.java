@@ -29,6 +29,8 @@ public class Login extends AppCompatActivity {
         Bini=(Button) findViewById(R.id.inicio_boton_log_in);
         Breg=(Button) findViewById(R.id.inicio_bonton_sign_in);
         DB=new DatabaseHelper(this);
+
+
     }
 
     public void iniciarSesion(View view) {
@@ -44,6 +46,7 @@ public class Login extends AppCompatActivity {
                 //Lanzar la activity
                 Intent SA=new Intent(view.getContext(),MainActivity.class);
                 startActivity(SA);
+                PASS.setText("");
             }
             else
             {
@@ -51,8 +54,8 @@ public class Login extends AppCompatActivity {
                 Toast toast=Toast.makeText(this,"",Toast.LENGTH_LONG);
                 toast.setText(R.string.msg_error_user_pass2);
                 toast.setGravity(CENTER,0,0);
-
                 toast.show();
+                PASS.setText("");
             }
         }
         else
@@ -76,5 +79,9 @@ public class Login extends AppCompatActivity {
     public void crearUsuario(View view) {
         Intent AFR=new Intent(this,FormularioRegistro.class);
         startActivity(AFR);
+    }
+
+    public void vaciarpass(View view) {
+        PASS.setText("");
     }
 }

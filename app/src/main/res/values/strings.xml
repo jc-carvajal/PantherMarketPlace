@@ -19,10 +19,21 @@
     <string name="txt_remember_user">Recordar Usuario</string>
     <string name="txt_log_in">INICIO DE SESION</string>
     <string name="txt_dont_user">No tienes un usuario? Registrate presionando el botón</string>
-    <string name="txt_email">Correo@mail.com</string>
+    <string name="txt_email">Correo@email.com</string>
 
     <string name="msg_error_user_pass">Error de usuario o contraseña</string>
-    <string name="msg_error_user_pass2">Error de usuario o contraseña 2</string>
+    <string name="msg_error_user_pass2">Error de usuario o contraseña</string>
+    <string name="msg_error_reg_llenar_txt">Debe completar el formulario para crear la cuenta</string>
+    <string name="msg_error_reg_user_txt">En Usuario solo caracteres alfanuméricos</string>
+    <string name="msg_error_reg_pass_txt">En Contraseña solo caracteres alfanuméricos</string>
+    <string name="msg_error_reg_name_txt">En Nombre solo Letras mayúsculas o minúsculas</string>
+    <string name="msg_error_reg_apellido_txt">En Apellido solo Letras mayúsculas o minúsculas</string>
+    <string name="msg_error_reg_telefono_txt">En Teléfono solo Números</string>
+    <string name="msg_error_reg_email_txt">En Correo solo Alfanuméricos y caracteres (. - _ @)</string>
+    <string name="msg_error_pass_comparacion">Las contraseñas deben ser iguales</string>
+    <string name="msg_error_existe_usuario">El nombre de Usuario ya existe</string>
+    <string name="msg_registro_exitoso">Registro Exitoso</string>
+    <string name="msg_registro_error_guardar">Error en Registro</string>
 
     <string name="label_sign_in">REGISTRO</string>
     <string name="label_log_in">INICIAR SESION</string>

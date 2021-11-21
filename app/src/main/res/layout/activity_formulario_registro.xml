@@ -31,7 +31,7 @@
         android:gravity="center_horizontal">
 
         <EditText
-            android:id="@+id/e7"
+            android:id="@+id/reg_usuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="70dp"
@@ -43,55 +43,7 @@
             android:textSize="20dp"/>
 
         <EditText
-            android:id="@+id/e6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="70dp"
-            android:layout_marginTop="3dp"
-            android:background="@color/blanco_clear10"
-            android:hint="@string/txt_email"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textSize="20dp"/>
-
-        <EditText
-            android:id="@+id/e1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="70dp"
-            android:layout_marginTop="3dp"
-            android:background="@color/blanco_clear10"
-            android:hint="@string/txt_name"
-            android:inputType="textPersonName"
-            android:textAlignment="center"
-            android:textSize="20dp"/>
-
-        <EditText
-            android:id="@+id/e2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="70dp"
-            android:layout_marginTop="3dp"
-            android:background="@color/blanco_clear10"
-            android:hint="@string/txt_last_name"
-            android:inputType="textPersonName"
-            android:textAlignment="center"
-            android:textSize="20dp"/>
-
-        <EditText
-            android:id="@+id/e3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="70dp"
-            android:layout_marginTop="3dp"
-            android:background="@color/blanco_clear10"
-            android:hint="@string/txt_phone"
-            android:inputType="phone"
-            android:textAlignment="center"
-            android:textSize="20dp"/>
-
-        <EditText
-            android:id="@+id/e4"
+            android:id="@+id/reg_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="70dp"
@@ -103,7 +55,7 @@
             android:textSize="20dp"/>
 
         <EditText
-            android:id="@+id/e5"
+            android:id="@+id/reg_pass2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="70dp"
@@ -113,6 +65,58 @@
             android:inputType="textPassword"
             android:textAlignment="center"
             android:textSize="20dp"/>
+
+
+
+        <EditText
+            android:id="@+id/reg_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/blanco_clear10"
+            android:hint="@string/txt_name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/reg_apellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/blanco_clear10"
+            android:hint="@string/txt_last_name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/reg_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/blanco_clear10"
+            android:hint="@string/txt_phone"
+            android:inputType="phone"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/reg_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/blanco_clear10"
+            android:hint="@string/txt_email"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+
 
 
 
