@@ -62,7 +62,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/blanco_clear10"
             android:hint="@string/txt_password"
-            android:onClick="vaciarpass"
+            
             android:inputType="textPassword"
             android:textAlignment="center"
             android:textSize="25dp"/>
