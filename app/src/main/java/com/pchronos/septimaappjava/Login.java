@@ -82,6 +82,6 @@ public class Login extends AppCompatActivity {
     }
 
     public void vaciarpass(View view) {
-        PASS.setText("");
+        //PASS.setText("");
     }
 }
