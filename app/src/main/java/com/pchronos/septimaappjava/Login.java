@@ -25,7 +25,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         USER=(EditText) findViewById(R.id.inicio_usuario);
         PASS=(EditText) findViewById(R.id.inicio_password);
-        REM_US=(CheckBox) findViewById(R.id.inicio_recordar);
+        REM_US=(CheckBox) findViewById(R.id.check_registro);
         Bini=(Button) findViewById(R.id.inicio_boton_log_in);
         Breg=(Button) findViewById(R.id.inicio_bonton_sign_in);
         DB=new DatabaseHelper(this);

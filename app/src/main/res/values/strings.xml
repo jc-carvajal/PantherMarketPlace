@@ -21,6 +21,9 @@
     <string name="txt_dont_user">No tienes un usuario? Registrate presionando el botón</string>
     <string name="txt_email">Correo@email.com</string>
 
+    <string name="check_registro">Acepto las políticas de uso</string>
+
+
     <string name="msg_error_user_pass">Error de usuario o contraseña</string>
     <string name="msg_error_user_pass2">Error de usuario o contraseña</string>
     <string name="msg_error_reg_llenar_txt">Debe completar el formulario para crear la cuenta</string>
@@ -33,7 +36,12 @@
     <string name="msg_error_pass_comparacion">Las contraseñas deben ser iguales</string>
     <string name="msg_error_existe_usuario">El nombre de Usuario ya existe</string>
     <string name="msg_registro_exitoso">Registro Exitoso</string>
+    <string name="msg_registro_a_login">El registro se ha completado con exito, presione OK para ir a Inicio de sesión</string>
     <string name="msg_registro_error_guardar">Error en Registro</string>
+    <string name="msg_debe_aceptar">Antes de continuar debe aceptar nuestras políticas de uso. Maque la casilla para aceptar</string>
+    <string name="msg_usage_policies_titulo">Políticas de Uso</string>
+
+
 
     <string name="label_sign_in">REGISTRO</string>
     <string name="label_log_in">INICIAR SESION</string>
@@ -46,5 +54,8 @@
 
     <string name="apertura">Apertura</string>
     <string name="cierre">Cierre</string>
+
+    <string name="ok">OK</string>
+    <string name="next">Siguiente</string>
 
 </resources>
