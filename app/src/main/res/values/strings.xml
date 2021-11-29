@@ -38,7 +38,7 @@
     <string name="msg_registro_exitoso">Registro Exitoso</string>
     <string name="msg_registro_a_login">El registro se ha completado con exito, presione OK para ir a Inicio de sesión</string>
     <string name="msg_registro_error_guardar">Error en Registro</string>
-    <string name="msg_debe_aceptar">Antes de continuar debe aceptar nuestras políticas de uso. Maque la casilla para aceptar</string>
+    <string name="msg_debe_aceptar">Antes de continuar debe aceptar nuestras políticas de uso. Marque la casilla para aceptar</string>
     <string name="msg_usage_policies_titulo">Políticas de Uso</string>
 
 

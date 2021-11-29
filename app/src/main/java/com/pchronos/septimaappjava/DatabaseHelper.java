@@ -25,6 +25,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public final static String COL3_2="ARTICULO";
     public final static String COL4_2="CANTIDAD";
 
+    public final static String TABLE3_NAME="ULTIMOUSUARIO";
+    public final static String COL_13="ID";
+    public final static String COL_23="USUARIO";
+    public final static String COL_33="SESION";
+
     public DatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
@@ -36,15 +41,52 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE2_NAME+"(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "USUARIO TEXT,ARTICULO TEXT,CANTIDAD INTEGER)");
+
+        db.execSQL("CREATE TABLE IF NOT EXISTS "+TABLE3_NAME+"(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "USUARIO TEXT,SESION TEXT)");
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE1_NAME);
-        onCreate(db);
-
         db.execSQL("DROP TABLE IF EXISTS "+TABLE2_NAME);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE3_NAME);
         onCreate(db);
+    }
+
+    public boolean insertUltimoUsuario(String usuario,String sesion)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues cv=new ContentValues();
+        cv.put(COL_23,usuario);
+        cv.put(COL_33,sesion);
+        long result=db.insert(TABLE3_NAME,null,cv);
+        if(result==-1)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public boolean updateUltimoUsuario(String usuario,String sesion)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues cv=new ContentValues();
+        cv.put(COL_23,usuario);
+        cv.put(COL_33,sesion);
+        long result=db.update(TABLE3_NAME,cv,"ID=?",new String[]{"1"});
+        if(result==-1)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public boolean insertData(String usuario,String password,String nombre,String apellido,String telefono,String correo)
@@ -72,6 +114,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     {
         SQLiteDatabase db=this.getWritableDatabase();
         Cursor cursor=db.rawQuery("SELECT *FROM "+TABLE1_NAME+" WHERE USUARIO='"+usuario+"'",null);
+        return cursor;
+    }
+
+    public Cursor getUltimo(String id)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        //Cursor cursor=db.rawQuery("SELECT *FROM "+TABLE3_NAME+" WHERE ID='"+id+"'",null);
+        Cursor cursor=db.rawQuery("SELECT *FROM "+TABLE3_NAME+" WHERE ID='"+id+"'",null);
         return cursor;
     }
 
