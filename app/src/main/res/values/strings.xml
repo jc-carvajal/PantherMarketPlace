@@ -42,6 +42,11 @@
     <string name="msg_usage_policies_titulo">Políticas de Uso</string>
 
 
+    <string name="menu_opcion_usuario">Configuraciones de usuario</string>
+    <string name="menu_comprar">Comprar</string>
+    <string name="menu_cerrar_sesion">Cerrar sesión</string>
+
+
 
     <string name="label_sign_in">REGISTRO</string>
     <string name="label_log_in">INICIAR SESION</string>
@@ -56,6 +61,11 @@
     <string name="cierre">Cierre</string>
 
     <string name="ok">OK</string>
+    <string name="cancelar">Cancelar</string>
     <string name="next">Siguiente</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+
+    <string name="msg_confirmar_cerrar_sesion">Desea cerrar sesión?</string>
 
 </resources>

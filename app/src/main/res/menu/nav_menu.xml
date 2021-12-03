@@ -4,11 +4,16 @@
     <item
         android:id="@+id/op1nav"
         android:icon="@drawable/ic_usuario"
-        android:title="Crear Usuario"/>
+        android:title="@string/menu_opcion_usuario"/>
 
     <item
         android:id="@+id/op2nav"
         android:icon="@drawable/ic_comprar"
-        android:title="Comprar"/>
+        android:title="@string/menu_comprar"/>
+
+    <item
+        android:id="@+id/op5nav"
+        android:icon="@drawable/ic_salir"
+        android:title="@string/menu_cerrar_sesion"/>
 
 </menu>
