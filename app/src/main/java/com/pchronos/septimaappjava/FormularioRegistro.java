@@ -2,14 +2,18 @@ package com.pchronos.septimaappjava;
 
 import static android.view.Gravity.CENTER;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,6 +27,7 @@ public class FormularioRegistro extends AppCompatActivity {
     EditText R_US,R_PASS,R_PASS2,R_NOMBRE,R_APE,R_TEL,R_EMAIL,P,Pc;
     TextView T1;
     DatabaseHelper DB;
+    CheckBox CHECK;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,7 @@ public class FormularioRegistro extends AppCompatActivity {
         R_EMAIL=(EditText)findViewById(R.id.reg_email);
         T1=(TextView) findViewById(R.id.testado);
         DB=new DatabaseHelper(this);
+        CHECK=(CheckBox) findViewById(R.id.check_registro);
     }
 
 
@@ -181,23 +187,48 @@ public class FormularioRegistro extends AppCompatActivity {
                                         }
                                         else
                                         {
-                                            //guardar datos
-
-                                            if(DB.insertData(usuario,password,nombre,apellido,telefono,correo))
+                                            if (CHECK.isChecked())//si check está marcado
                                             {
-                                                T1.setText("Registro Exitoso");
-                                                Toast toastregistroexitoso=Toast.makeText(this,"",Toast.LENGTH_LONG);
-                                                toastregistroexitoso.setText(R.string.msg_registro_exitoso);
-                                                toastregistroexitoso.setGravity(CENTER,0,0);
-                                                toastregistroexitoso.show();
+
+                                                //guardar datos
+
+                                                if(DB.insertData(usuario,password,nombre,apellido,telefono,correo))
+                                                {
+                                                    //T1.setText("Registro Exitoso");
+                                                    //Toast toastregistroexitoso=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                                                    //toastregistroexitoso.setText(R.string.msg_registro_exitoso);
+                                                    //toastregistroexitoso.setGravity(CENTER,0,0);
+                                                    //toastregistroexitoso.show();
+
+                                                    AlertDialog.Builder ALERTA=new AlertDialog.Builder(this);
+                                                    ALERTA.setTitle(R.string.msg_registro_exitoso);
+                                                    ALERTA.setMessage(R.string.msg_registro_a_login);
+                                                    ALERTA.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(DialogInterface dialog, int which) {
+                                                            Intent SA=new Intent(view.getContext(),Login.class);
+                                                            startActivity(SA);
+                                                        }
+                                                    });
+
+                                                    ALERTA.create().show();
+
+                                                }
+                                                else
+                                                {
+                                                    //T1.setText("Error en Registro");
+                                                    Toast toastregistroerror=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                                                    toastregistroerror.setText(R.string.msg_registro_error_guardar);
+                                                    toastregistroerror.setGravity(CENTER,0,0);
+                                                    toastregistroerror.show();
+                                                }
                                             }
                                             else
                                             {
-                                                T1.setText("Error en Registro");
-                                                Toast toastregistroerror=Toast.makeText(this,"",Toast.LENGTH_LONG);
-                                                toastregistroerror.setText(R.string.msg_registro_error_guardar);
-                                                toastregistroerror.setGravity(CENTER,0,0);
-                                                toastregistroerror.show();
+                                                Toast toastaceptarpoliticas=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                                                toastaceptarpoliticas.setText(R.string.msg_debe_aceptar);
+                                                toastaceptarpoliticas.setGravity(CENTER,0,0);
+                                                toastaceptarpoliticas.show();
                                             }
                                         }
 
@@ -338,5 +369,31 @@ public class FormularioRegistro extends AppCompatActivity {
 
         }
         return validacion;
+    }
+
+    public void metodopolitica2(View view) {
+
+        AlertDialog.Builder ALERTA=new AlertDialog.Builder(this);
+        ALERTA.setTitle(R.string.msg_usage_policies_titulo);
+        ALERTA.setMessage(R.string.datos1);
+        ALERTA.setPositiveButton(R.string.next, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                ALERTA.setTitle(R.string.msg_usage_policies_titulo);
+                ALERTA.setMessage(R.string.datos2);
+                ALERTA.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                ALERTA.create().show();
+
+
+            }
+        });
+
+        ALERTA.create().show();
     }
 }
