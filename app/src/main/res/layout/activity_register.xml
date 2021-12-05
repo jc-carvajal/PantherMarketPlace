@@ -1,9 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".RegisterActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:text="@string/common_title"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/teal_700"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="10dp">
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_personal_data"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                android:padding="12dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/t41"
+                android:layout_width="50sp"
+                android:layout_height="50sp">
+            </TextView>
+
+            <EditText
+                android:id="@+id/e41"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black"
+                android:layout_gravity="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/e42"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/last_name"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black"
+                android:layout_gravity="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/e43"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/black"
+                android:layout_gravity="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/e44"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:textColorHint="@color/black"
+                android:layout_gravity="center">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/b41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="createUser"
+                android:text="@string/create_user"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+            </Button>
+            <Button
+                android:id="@+id/b42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="logOut"
+                android:text="@string/logout"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp">
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
