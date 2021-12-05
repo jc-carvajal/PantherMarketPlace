@@ -3,4 +3,8 @@
     <string name="panther_shop">PANTHER SHOP</string>
     <string name="login">LOGIN</string>
     <string name="register">REGISTER</string>
+    <string name="input_data">Input Data</string>
+    <string name="user">Usuario</string>
+    <string name="hint_password">Password</string>
+    <string name="access">ACCESS</string>
 </resources>
