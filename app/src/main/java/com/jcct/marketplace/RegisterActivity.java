@@ -67,14 +67,15 @@ public class RegisterActivity extends AppCompatActivity
                 for (pos = 0; pos < chain.length(); pos ++)
                 {
                     c = chain.charAt(pos);
-                    if ((c >= 67 && c <= 90) || (c >= 97 && c <= 122))
+                    if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
                     {
                         validation = 1;
                     }
                     else
                     {
-                        pos = chain.length();
                         validation = 0;
+
+                        pos = chain.length();
                     }
                 }
                 break;

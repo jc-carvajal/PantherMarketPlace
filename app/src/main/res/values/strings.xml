@@ -18,6 +18,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="datos1">PRIVACY POLICY
 
+
 This Privacy Policy establishes the terms in which TEAM PANTHER uses and protects the information that is provided by its users when using its website. This company is committed to the security of its users\' data. When we ask you to fill in the fields of personal information with which you can be identified, we do so by ensuring that it will only be used in accordance with the terms of this document. However, this Privacy Policy may change over time or be updated so we recommend and emphasize continually reviewing this page to ensure that you agree with such changes.
 
 Information that is collected
@@ -54,4 +55,13 @@ TEAM PANTHER reserves the right to change the terms of this Privacy Policy at an
     <string name="logout">Logout</string>
     <string name="error">Error</string>
     <string name="ok">OK</string>
+    <string name="create_user_navigator">Create User</string>
+    <string name="purchase">Purchase</string>
+    <string name="navigator">We are the Champions</string>
+    <string name="aperture">Aperture</string>
+    <string name="close">Close</string>
+    <string name="proof">Robin</string>
+    <string name="creating_user_navigation">You are going to create a new User</string>
+    <string name="buy_items">Buy items</string>
+    <string name="welcome">WELCOME</string>
 </resources>
