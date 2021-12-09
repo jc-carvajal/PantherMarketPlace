@@ -12,11 +12,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.ViewDebug;
 import android.widget.TextView;
+
+import java.io.StringWriter;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     TextView T1;
+    TextView US_NAME;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         NavigationView navigationView=(NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //US_NAME=(TextView)findViewById(R.id.dbname1);
+        //metodousname();
+    }
+
+    public void metodousname() {
+        US_NAME.setText("funciona");
+        
+
     }
 
     @Override
@@ -39,12 +53,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.op1nav:
                 T1.setText("Escogió opcion 1 crear usuario");
                 //lanza la activity del formulario
-                Intent AFR=new Intent(this,FormularioRegistro.class);
+                Intent AFR=new Intent(this,Configuraciones.class);
                 startActivity(AFR);
+
                 break;
 
             case R.id.op2nav:
                 T1.setText("Comprar");
+                Intent CH=new Intent(this,ComprasHome.class);
+                startActivity(CH);
                 break;
 
             case R.id.op5nav:

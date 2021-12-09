@@ -19,6 +19,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Source;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class FormularioRegistro extends AppCompatActivity {
     int op=0;
     LinearLayout CONTE;
@@ -28,6 +36,12 @@ public class FormularioRegistro extends AppCompatActivity {
     TextView T1;
     DatabaseHelper DB;
     CheckBox CHECK;
+
+    FirebaseFirestore DB_FIRE;
+    Map<String, Object> DATOSALMACENAR;
+    String TAG="";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +59,12 @@ public class FormularioRegistro extends AppCompatActivity {
         R_TEL=(EditText)findViewById(R.id.reg_telefono);
         R_EMAIL=(EditText)findViewById(R.id.reg_email);
         T1=(TextView) findViewById(R.id.testado);
+
         DB=new DatabaseHelper(this);
         CHECK=(CheckBox) findViewById(R.id.check_registro);
+
+        DB_FIRE=FirebaseFirestore.getInstance();
+        DATOSALMACENAR= new HashMap<>();
     }
 
 
@@ -86,6 +104,217 @@ public class FormularioRegistro extends AppCompatActivity {
     }
 
     public void crearUsuario(View view) {
+        String usuario,password,password2,nombre,apellido,telefono,correo;
+        int v1,v2,v3,v4,v5,v6,v7;
+
+        String DB_USUARIO="";
+
+        usuario=R_US.getText().toString();
+        v1=validarCaracteres(3,usuario);
+
+        password=R_PASS.getText().toString();
+        v2=validarCaracteres(3,password);
+
+        password2=R_PASS2.getText().toString();
+        v7=validarCaracteres(3,password2);
+
+        nombre=R_NOMBRE.getText().toString();
+        v3=validarCaracteres(1,nombre);
+
+        apellido=R_APE.getText().toString();
+        v4=validarCaracteres(1,apellido);
+
+        telefono=R_TEL.getText().toString();
+        v5=validarCaracteres(2,telefono);
+
+        correo=R_EMAIL.getText().toString();
+        v6=validarCaracteres(4,correo);
+
+        if (usuario.equals("") || password.equals("") || password2.equals("") || nombre.equals("") || apellido.equals("") || telefono.equals("") || usuario.equals(""))//que no hayan espacios vacios
+        {
+            Toast toastcompletar=Toast.makeText(this,"",Toast.LENGTH_LONG);
+            toastcompletar.setText(R.string.msg_error_reg_llenar_txt);
+            toastcompletar.setGravity(CENTER,0,0);
+            toastcompletar.show();
+        }
+        else
+        {
+            if (v1!=1)//usuario
+            {
+                Toast toastusuario=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                toastusuario.setText(R.string.msg_error_reg_user_txt);
+                toastusuario.setGravity(CENTER,0,0);
+                toastusuario.show();
+            }
+            else
+            {
+                if (v2!=1 || v7!=1)//password 1 y 2
+                {
+                    Toast toastpassword=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                    toastpassword.setText(R.string.msg_error_reg_pass_txt);
+                    toastpassword.setGravity(CENTER,0,0);
+                    toastpassword.show();
+                }
+                else
+                {
+                    if (v3!=1)//nombre
+                    {
+                        Toast toastnombre=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                        toastnombre.setText(R.string.msg_error_reg_name_txt);
+                        toastnombre.setGravity(CENTER,0,0);
+                        toastnombre.show();
+                    }
+                    else
+                    {
+                        if (v4!=1)//apellido
+                        {
+                            Toast toastapellido=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                            toastapellido.setText(R.string.msg_error_reg_apellido_txt);
+                            toastapellido.setGravity(CENTER,0,0);
+                            toastapellido.show();
+                        }
+                        else
+                        {
+                            if (v5!=1)//telefono
+                            {
+                                Toast toasttelefono=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                                toasttelefono.setText(R.string.msg_error_reg_telefono_txt);
+                                toasttelefono.setGravity(CENTER,0,0);
+                                toasttelefono.show();
+                            }
+                            else
+                            {
+                                if (v6!=1)//correo
+                                {
+                                    Toast toastemail=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                                    toastemail.setText(R.string.msg_error_reg_email_txt);
+                                    toastemail.setGravity(CENTER,0,0);
+                                    toastemail.show();
+                                }
+                                else
+                                {
+                                    if (password.equals(password2))//confirmar que contraseñas sean iguales
+                                    {
+                                        //ver si existe el usuario
+
+                                        if (CHECK.isChecked())//si check está marcado
+                                        {
+                                            //=====metodo consulta
+
+                                            DB_FIRE.collection("USERS").document(usuario)
+                                                    .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                                @Override
+                                                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                                    String DB_USUARIO,DB_USUARIO_CONFIRM;
+
+                                                    try {
+                                                        DB_USUARIO=(documentSnapshot.get("USER").toString());
+                                                    }catch (Exception e)
+                                                    {
+                                                        DB_USUARIO="";
+                                                    }
+
+
+                                                    if (DB_USUARIO.equals(usuario))
+                                                    {
+                                                        Toast toastexisteusuario=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
+                                                        toastexisteusuario.setText(R.string.msg_error_existe_usuario);
+                                                        toastexisteusuario.setGravity(CENTER,0,0);
+                                                        toastexisteusuario.show();
+
+                                                    }
+                                                    else
+                                                    {
+
+
+                                                        //guardar datos
+
+                                                        DATOSALMACENAR.put("USER",usuario);
+                                                        DATOSALMACENAR.put("PASSWORD",password);
+                                                        DATOSALMACENAR.put("NAME",nombre);
+                                                        DATOSALMACENAR.put("LASTNAME",apellido);
+                                                        DATOSALMACENAR.put("PHONENUMBER",telefono);
+                                                        DATOSALMACENAR.put("EMAIL",correo);
+                                                        DATOSALMACENAR.put("RECOVERY","");
+
+
+                                                        try {
+
+                                                            DB_FIRE.collection("USERS").document(usuario).set(DATOSALMACENAR);
+                                                            //DB_FIRE.collection("USERS").document(usuario).update(DATOSALMACENAR);
+
+
+                                                        }catch (Exception e)
+                                                        {
+
+                                                            Toast toastregistroerror=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
+                                                            toastregistroerror.setText(R.string.msg_registro_error_guardar);
+                                                            toastregistroerror.setGravity(CENTER,0,0);
+                                                            toastregistroerror.show();
+
+                                                        }
+
+                                                        //=======confirmar que se guardaron los datos
+                                                        try {
+                                                            DB_USUARIO_CONFIRM=(documentSnapshot.get("USER").toString());
+                                                        }catch (Exception e)
+                                                        {
+                                                            DB_USUARIO_CONFIRM="";
+                                                        }
+
+
+                                                        if (DB_USUARIO_CONFIRM.equals(DB_USUARIO))
+                                                        {
+                                                            Toast toastexisteusuario=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
+                                                            toastexisteusuario.setText(R.string.msg_registro_exitoso);
+                                                            toastexisteusuario.setGravity(CENTER,0,0);
+                                                            toastexisteusuario.show();
+
+                                                        }
+                                                        else
+                                                        {
+                                                            Toast toastregistroerror=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
+                                                            toastregistroerror.setText(R.string.msg_registro_error_guardar);
+                                                            toastregistroerror.setGravity(CENTER,0,0);
+                                                            toastregistroerror.show();
+                                                        }
+                                                        //=======confirmar que se guardaron los datos fin
+
+                                                    }
+
+                                                }
+                                            });
+                                            //=====metodo consulta fin
+                                        }
+                                        else
+                                        {
+                                            Toast toastaceptarpoliticas=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
+                                            toastaceptarpoliticas.setText(R.string.msg_debe_aceptar);
+                                            toastaceptarpoliticas.setGravity(CENTER,0,0);
+                                            toastaceptarpoliticas.show();
+                                        }
+
+
+                                    }
+                                    else
+                                    {
+                                        Toast toastpasscomparacion=Toast.makeText(this,"",Toast.LENGTH_LONG);
+                                        toastpasscomparacion.setText(R.string.msg_error_pass_comparacion);
+                                        toastpasscomparacion.setGravity(CENTER,0,0);
+                                        toastpasscomparacion.show();
+                                        R_PASS.setText("");
+                                        R_PASS2.setText("");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void crearUsuariosql(View view) {
         String usuario,password,password2,nombre,apellido,telefono,correo;
         int v1,v2,v3,v4,v5,v6,v7;
 
