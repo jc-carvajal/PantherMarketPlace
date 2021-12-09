@@ -3,6 +3,7 @@ package com.jcct.marketplace;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,8 +13,9 @@ import android.widget.TextView;
 public class RegisterActivity extends AppCompatActivity
 {
     EditText E41,E42,E43,E44;
-    Button B41,B42;
+    Button B41,B42,B43,B44,B45;
     TextView T41;
+    DatabaseHelper DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,7 +28,11 @@ public class RegisterActivity extends AppCompatActivity
         E44 = (EditText) findViewById(R.id.e44);
         B41 = (Button) findViewById(R.id.b41);
         B42 = (Button) findViewById(R.id.b42);
+        B43 = (Button) findViewById(R.id.b43);
+        B44 = (Button) findViewById(R.id.b44);
+        B45 = (Button) findViewById(R.id.b45);
         T41 = (TextView) findViewById(R.id.t41);
+        DB= new DatabaseHelper(this);
     }
 
     public void createUser(View view)
@@ -49,8 +55,8 @@ public class RegisterActivity extends AppCompatActivity
         }
         else
         {
-            //Create new User
-            T41.setText(R.string.ok);
+            DB.insertData(name, last_name, email, phone_number);
+            T41.setText("Successful Register");
         }
     }
 
@@ -105,5 +111,37 @@ public class RegisterActivity extends AppCompatActivity
     {
         Intent MA = new Intent(view.getContext(), MainActivity.class);
         startActivity(MA);
+    }
+
+    public void consultMethod(View view)
+    {
+        //Searching Criteria
+        Cursor res = DB.getData(E44.getText().toString());
+        String DATA = null;
+        if (res.moveToFirst())
+        {
+            DATA = "ID: " + res.getString(0) + "\n NAME: " + res.getString(1)
+                    + "\n LAST_NAME: " + res.getString(2) + "\n EMAIL: " + res.getString(3) +
+                    "\n PHONE_NUMBER: " + res.getString(4);
+        }
+        T41.setText(DATA);
+    }
+
+    public void saveMethod(View view)
+    {
+        DB.insertData(E41.getText().toString(), E42.getText().toString(), E43.getText().toString(), E44.getText().toString());
+    }
+
+    public void updateMethod(View view)
+    {
+        DB.upDateData(E44.getText().toString(), E41.getText().toString(), E42.getText().toString(),
+                E43.getText().toString(), E44.getText().toString());
+        /*DB.upDateData(E44.getText().toString(), E41.getText().toString(), E42.getText().toString(),
+                E43.getText().toString());*/
+    }
+
+    public void deleteMethod(View view)
+    {
+        DB.deleteData(E44.getText().toString());
     }
 }

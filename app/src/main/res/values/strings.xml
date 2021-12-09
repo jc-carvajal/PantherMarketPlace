@@ -64,4 +64,9 @@ TEAM PANTHER reserves the right to change the terms of this Privacy Policy at an
     <string name="creating_user_navigation">You are going to create a new User</string>
     <string name="buy_items">Buy items</string>
     <string name="welcome">WELCOME</string>
+    <string name="consult_method">CONSULT</string>
+    <string name="save_method">SAVE</string>
+    <string name="consulted_information">Consulted Information</string>
+    <string name="update_method">UPDATE</string>
+    <string name="delete_method">DELETE</string>
 </resources>

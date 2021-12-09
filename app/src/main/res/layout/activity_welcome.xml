@@ -55,56 +55,6 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp">
         </TextView>
-        <Button
-            android:id="@+id/b31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_gravity="center">
-        </Button>
-        <Button
-            android:id="@+id/b32"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_gravity="center">
-        </Button>
-        <Button
-            android:id="@+id/b33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_gravity="center">
-        </Button>
-        <Button
-            android:id="@+id/b34"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_gravity="center">
-        </Button>
-        <Button
-            android:id="@+id/b35"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_gravity="center">
-        </Button>
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

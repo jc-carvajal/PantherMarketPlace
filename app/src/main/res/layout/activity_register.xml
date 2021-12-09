@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.7"
+            android:layout_weight="1"
             android:text="@string/common_title"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -29,10 +29,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="2.5"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:layout_margin="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -48,8 +49,9 @@
 
             <TextView
                 android:id="@+id/t41"
-                android:layout_width="50sp"
-                android:layout_height="50sp">
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7">
             </TextView>
 
             <EditText
@@ -100,27 +102,80 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/b41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="createUser"
-                android:text="@string/create_user"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/b41"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="saveMethod"
+                    android:text="@string/save_method"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="35dp">
+                </Button>
+                <Button
+                    android:id="@+id/b42"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="consultMethod"
+                    android:text="@string/consult_method"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="35dp">
+                </Button>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/b43"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="updateMethod"
+                    android:text="@string/update_method"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="35dp">
+                </Button>
+                <Button
+                    android:id="@+id/b44"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="deleteMethod"
+                    android:text="@string/delete_method"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="35dp">
+                </Button>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp">
-            </Button>
-            <Button
-                android:id="@+id/b42"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="logOut"
-                android:text="@string/logout"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp">
-            </Button>
+                android:gravity="center">
+                <Button
+                    android:id="@+id/b45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="logOut"
+                    android:text="@string/logout"
+                    android:layout_gravity="center">
+                </Button>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
