@@ -47,7 +47,6 @@
     <string name="menu_cerrar_sesion">Cerrar sesión</string>
 
 
-
     <string name="label_sign_in">REGISTRO</string>
     <string name="label_log_in">INICIAR SESION</string>
 
@@ -65,6 +64,8 @@
     <string name="next">Siguiente</string>
     <string name="si">Si</string>
     <string name="no">No</string>
+    <string name="menu">Menú</string>
+    <string name="hi">Hola!</string>
 
     <string name="msg_confirmar_cerrar_sesion">Desea cerrar sesión?</string>
 

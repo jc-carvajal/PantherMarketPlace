@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "977936055872",
+    "project_id": "grupo9firebase",
+    "storage_bucket": "grupo9firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977936055872:android:b7e22d11a04f17b456e9a5",
+        "android_client_info": {
+          "package_name": "com.pchronos.decimaapp31"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977936055872-j56v0v2cc87doo4ahvu3jvlt0v9idcnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTJhKZLOm6dPFoe6RipLuTJIlRpRFkTtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977936055872-j56v0v2cc87doo4ahvu3jvlt0v9idcnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977936055872:android:d962f7e1cf76d6be56e9a5",
+        "android_client_info": {
+          "package_name": "com.pchronos.decimoprimeraappjava"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977936055872-j56v0v2cc87doo4ahvu3jvlt0v9idcnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTJhKZLOm6dPFoe6RipLuTJIlRpRFkTtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977936055872-j56v0v2cc87doo4ahvu3jvlt0v9idcnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977936055872:android:793ddc437508da8656e9a5",
+        "android_client_info": {
+          "package_name": "com.pchronos.grupo9firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977936055872-j56v0v2cc87doo4ahvu3jvlt0v9idcnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTJhKZLOm6dPFoe6RipLuTJIlRpRFkTtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977936055872-j56v0v2cc87doo4ahvu3jvlt0v9idcnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977936055872:android:727bc4ae6ef51be056e9a5",
+        "android_client_info": {
+          "package_name": "com.pchronos.septimaappjava"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977936055872-j56v0v2cc87doo4ahvu3jvlt0v9idcnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTJhKZLOm6dPFoe6RipLuTJIlRpRFkTtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977936055872-j56v0v2cc87doo4ahvu3jvlt0v9idcnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
