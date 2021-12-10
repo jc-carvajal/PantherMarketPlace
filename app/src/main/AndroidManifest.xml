@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pchronos.septimaappjava" >
+    package="com.pchronos.septimaappjava">
 
     <application
         android:allowBackup="true"
@@ -8,10 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_ps_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SeptimaAppJava" >
+        android:theme="@style/Theme.SeptimaAppJava">
         <activity
-            android:name=".Configuraciones"
+            android:name=".Configuracion"
+            android:label="@string/label_configurations"
             android:exported="false" />
+
         <activity
             android:name=".ComprasHome"
             android:exported="false" />
@@ -31,7 +33,7 @@
         <activity
             android:name=".Login"
             android:exported="true"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

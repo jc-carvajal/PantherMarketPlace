@@ -270,6 +270,21 @@ public class FormularioRegistro extends AppCompatActivity {
                                                             toastexisteusuario.setGravity(CENTER,0,0);
                                                             toastexisteusuario.show();
 
+                                                           /* AlertDialog.Builder ALERTA=new AlertDialog.Builder(getBaseContext());
+                                                            ALERTA.setTitle(R.string.msg_registro_exitoso);
+                                                            ALERTA.setMessage(R.string.msg_registro_a_login);
+                                                            ALERTA.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                                                                @Override
+                                                                public void onClick(DialogInterface dialog, int which) {
+                                                                    Intent SA=new Intent(view.getContext(),Login.class);
+                                                                    startActivity(SA);
+                                                                }
+                                                            });
+
+                                                            ALERTA.create().show(); */
+
+
+
                                                         }
                                                         else
                                                         {
