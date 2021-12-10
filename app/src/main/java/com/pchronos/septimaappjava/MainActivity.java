@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.op1nav:
                 T1.setText("Escogió opcion 1 crear usuario");
                 //lanza la activity del formulario
-                //Intent AFR=new Intent(this,Configuraciones.class);
-                //startActivity(AFR);
+                Intent AFR=new Intent(this,Configuracion.class);
+                startActivity(AFR);
 
                 break;
 
