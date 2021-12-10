@@ -3,9 +3,9 @@ package com.pchronos.septimaappjava;
 import static android.view.Gravity.CENTER;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -166,14 +166,16 @@ public class Configuracion extends AppCompatActivity {
                                             if (FB_NEWPASSWORD_CONFIRM.equals(old_password))
                                             {
 
-                                                Toast toastexisteusuario=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
-                                                toastexisteusuario.setText(R.string.msg_change_pass_exitoso);
-                                                toastexisteusuario.setGravity(CENTER,0,0);
-                                                toastexisteusuario.show();
+                                                //Toast toastexisteusuario=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
+                                                //toastexisteusuario.setText(R.string.msg_change_pass_exitoso);
+                                                //toastexisteusuario.setGravity(CENTER,0,0);
+                                                //toastexisteusuario.show();
 
                                                 OLD_PASS.setText("");
                                                 NEW_PASS.setText("");
                                                 NEW_PASS2.setText("");
+
+                                                lanzarAlert();
 
 
                                             }
@@ -230,6 +232,27 @@ public class Configuracion extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private void lanzarAlert() {
+
+        androidx.appcompat.app.AlertDialog.Builder ALERTA=new AlertDialog.Builder(this);
+        ALERTA.setTitle(R.string.msg_registro_exitoso);
+        ALERTA.setMessage(R.string.msg_change_pass_exitoso);
+        ALERTA.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Intent SA2=new Intent(view.getContext(),Login.class);
+                //startActivity(SA2);
+                Intent RA=new Intent(getBaseContext(),MainActivity.class);//revisar
+                startActivity(RA);
+            }
+        });
+
+        
+
+        ALERTA.create().show();
+
     }
 
     private int validarCaracteres2(int i, String cadena) {
@@ -313,3 +336,4 @@ public class Configuracion extends AppCompatActivity {
         return validacion;
     }
 }
+

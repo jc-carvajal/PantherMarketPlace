@@ -265,10 +265,12 @@ public class FormularioRegistro extends AppCompatActivity {
 
                                                         if (DB_USUARIO_CONFIRM.equals(DB_USUARIO))
                                                         {
-                                                            Toast toastexisteusuario=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
-                                                            toastexisteusuario.setText(R.string.msg_registro_exitoso);
-                                                            toastexisteusuario.setGravity(CENTER,0,0);
-                                                            toastexisteusuario.show();
+                                                            //Toast toastexisteusuario=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
+                                                            //toastexisteusuario.setText(R.string.msg_registro_exitoso);
+                                                            //toastexisteusuario.setGravity(CENTER,0,0);
+                                                            //toastexisteusuario.show();
+
+                                                            lanzarAlertR();
 
                                                            /* AlertDialog.Builder ALERTA=new AlertDialog.Builder(getBaseContext());
                                                             ALERTA.setTitle(R.string.msg_registro_exitoso);
@@ -613,6 +615,26 @@ public class FormularioRegistro extends AppCompatActivity {
 
         }
         return validacion;
+    }
+
+    private void lanzarAlertR() {
+
+
+        androidx.appcompat.app.AlertDialog.Builder ALERTA=new AlertDialog.Builder(this);
+        ALERTA.setTitle(R.string.msg_registro_exitoso);
+        ALERTA.setMessage(R.string.msg_registro_a_login);
+        ALERTA.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Intent SA2=new Intent(view.getContext(),Login.class);
+                //startActivity(SA2);
+                Intent RA=new Intent(getBaseContext(),Login.class);//revisar
+                startActivity(RA);
+            }
+        });
+
+        ALERTA.create().show();
+
     }
 
     public void metodopolitica2(View view) {
