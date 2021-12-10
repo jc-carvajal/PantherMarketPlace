@@ -41,7 +41,7 @@ public class WelcomeActivity extends AppCompatActivity implements NavigationView
             case R.id.op1Nav:
                 T90.setText(R.string.creating_user_navigation);
                 //Launch FormularioActivity
-                Intent AFR = new Intent(this, RegisterActivity.class);
+                Intent AFR = new Intent(this, ValidateActivity.class);
                 startActivity(AFR);
                 break;
 

@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class RegisterActivity extends AppCompatActivity
 {
-    EditText E41,E42,E43,E44;
+    EditText E40,E41,E42,E43,E44,E45;
     Button B41,B42,B43,B44,B45;
     TextView T41;
     DatabaseHelper DB;
@@ -22,10 +22,12 @@ public class RegisterActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        E40 = (EditText) findViewById(R.id.e40);
         E41 = (EditText) findViewById(R.id.e41);
         E42 = (EditText) findViewById(R.id.e42);
         E43 = (EditText) findViewById(R.id.e43);
         E44 = (EditText) findViewById(R.id.e44);
+        E45 = (EditText) findViewById(R.id.e45);
         B41 = (Button) findViewById(R.id.b41);
         B42 = (Button) findViewById(R.id.b42);
         B43 = (Button) findViewById(R.id.b43);
@@ -37,26 +39,45 @@ public class RegisterActivity extends AppCompatActivity
 
     public void createUser(View view)
     {
-        String name, last_name, email, phone_number;
-        int v1, v2, v3, v4;
+        //Ingresar usuario y password
+        String user, name, last_name, email, phone_number, password;
+        int v1, v2, v3, v4, v5, v6;
+        user = E40.getText().toString();
+        v1 = validateCharacters(1,user);
         name = E41.getText().toString();
-        v1 = validateCharacters(1, name);
+        v2 = validateCharacters(1, name);
         last_name = E42.getText().toString();
-        v2 = validateCharacters(1, last_name);
+        v3 = validateCharacters(1, last_name);
         email = E43.getText().toString();
-        v3 = validateCharacters(2, email);
+        v4 = validateCharacters(1, email);
         phone_number = E44.getText().toString();
-        v4 = validateCharacters(2,phone_number);
+        v5 = validateCharacters(1,phone_number);
+        password = E45.getText().toString();
+        v6 = validateCharacters(1,phone_number);
 
-        if ((v1 != 1) || (v2 != 1) || (v3 != 1) || (v4 != 1))
+        if ((v1 != 1) || (v2 != 1) || (v3 != 1) || (v4 != 1) || (v5 != 1)|| (v6 != 1))
         {
             //Not will be created the User
             T41.setText(R.string.error);
         }
         else
         {
-            DB.insertData(name, last_name, email, phone_number);
-            T41.setText("Successful Register");
+            //Create new User
+            Cursor res = DB.getDataUser(user);//Ckeck whether this argument is proper!!!
+            String DATA = null;
+            if (res.moveToFirst())
+            {
+                DATA = " " + res.getString(6);
+                if (DATA.equals(user))
+                {
+                    //Error message 'user existent'
+                }
+                else
+                {
+                    DB.insertData(user, name, last_name, email, phone_number, password);
+                    T41.setText(R.string.msj_crated_user);
+                }
+            }
         }
     }
 
@@ -129,13 +150,14 @@ public class RegisterActivity extends AppCompatActivity
 
     public void saveMethod(View view)
     {
-        DB.insertData(E41.getText().toString(), E42.getText().toString(), E43.getText().toString(), E44.getText().toString());
+        DB.insertData(E40.getText().toString(), E41.getText().toString(), E42.getText().toString(),
+                E43.getText().toString(), E44.getText().toString(), E45.toString().toString());
     }
 
     public void updateMethod(View view)
     {
-        DB.upDateData(E44.getText().toString(), E41.getText().toString(), E42.getText().toString(),
-                E43.getText().toString(), E44.getText().toString());
+        DB.upDateData(E44.getText().toString(), E40.getText().toString(), E41.getText().toString(),
+                E42.getText().toString(),E43.getText().toString(), E44.getText().toString(), E45.getText().toString());
         /*DB.upDateData(E44.getText().toString(), E41.getText().toString(), E42.getText().toString(),
                 E43.getText().toString());*/
     }

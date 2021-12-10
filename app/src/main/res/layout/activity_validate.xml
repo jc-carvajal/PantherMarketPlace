@@ -55,7 +55,7 @@
                 </TextView>
 
                 <EditText
-                    android:id="@+id/e21"
+                    android:id="@+id/e21Login"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -69,7 +69,7 @@
                 </EditText>
 
                 <EditText
-                    android:id="@+id/e22"
+                    android:id="@+id/e22Login"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -83,19 +83,34 @@
                 </EditText>
 
                 <Button
-                    android:id="@+id/b21"
+                    android:id="@+id/b21Login"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1.5"
-                    android:hint="@string/access"
+                    android:text="@string/validate"
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:layout_marginTop="20dp"
                     android:onClick="validateData"
-                    >
+                    android:background="@color/teal_200"                    >
                 </Button>
+                <Button
+                    android:id="@+id/b22Login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:text="NEW REGISTER"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="createUserMethod"
+                    android:background="@color/teal_200"                    >
+                </Button>
+
             </LinearLayout>
 
     </LinearLayout>

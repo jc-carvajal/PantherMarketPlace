@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -15,8 +16,9 @@ import android.widget.Toast;
 
 public class ValidateActivity extends AppCompatActivity
 {
+    DatabaseHelper DB;
     TextView T21;
-    Button B21;
+    Button B21, B22;
     EditText E21,E22;
 
     @Override
@@ -25,13 +27,36 @@ public class ValidateActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_validate);
         T21 = (TextView) findViewById(R.id.t21);
-        B21 = (Button) findViewById(R.id.b11);
-        E21 = (EditText) findViewById(R.id.e21);
-        E22 = (EditText) findViewById(R.id.e22);
+        B21 = (Button) findViewById(R.id.b21Login);
+        B22 = (Button) findViewById(R.id.b22Login);
+        E21 = (EditText) findViewById(R.id.e21Login);
+        E22 = (EditText) findViewById(R.id.e22Login);
+        DB = new DatabaseHelper(this);
     }
 
     public void validateData(View view)
     {
+        String usua = E21.getText().toString();
+        String pass = E22.getText().toString();
+        Cursor res = DB.getDataUser(usua);
+        String DATA = null;
+        if (res.moveToFirst())
+        {
+            DATA = " " + res.getString(6);
+            if (DATA.equals(pass))
+            {
+                //Launch activity Purchase
+            }
+            else
+            {
+                //Show error through emergent information
+            }
+        }
+        else
+        {
+            //Indicate user nonexistent
+        }
+
         if (E21.getText().toString().equals("Robin") && E22.getText().toString().equals("75063014"))
         {
             AlertDialog.Builder WARNING = new AlertDialog.Builder(this);
@@ -66,5 +91,11 @@ public class ValidateActivity extends AppCompatActivity
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         }
+    }
+
+    public void createUserMethod(View view)
+    {
+        Intent RA = new Intent(this, RegisterActivity.class);
+        startActivity(RA);
     }
 }

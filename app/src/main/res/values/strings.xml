@@ -69,4 +69,10 @@ TEAM PANTHER reserves the right to change the terms of this Privacy Policy at an
     <string name="consulted_information">Consulted Information</string>
     <string name="update_method">UPDATE</string>
     <string name="delete_method">DELETE</string>
+    <string name="messge_db_save_user">Successful Register</string>
+    <string name="validate">LOGIN</string>
+    <string name="create_user_validate">CREATE USER</string>
+    <string name="register_user">User</string>
+    <string name="register_password">Password</string>
+    <string name="msj_crated_user">Successful Register</string>
 </resources>

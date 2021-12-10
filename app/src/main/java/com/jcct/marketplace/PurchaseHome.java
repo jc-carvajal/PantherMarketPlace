@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class FormularioRegistro extends AppCompatActivity
-{
+public class PurchaseHome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_formulario_registro);
+        setContentView(R.layout.activity_purchase_home);
     }
 }
