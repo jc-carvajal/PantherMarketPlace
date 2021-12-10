@@ -1,72 +1,85 @@
 <resources>
-    <string name="app_name">PantherShop</string>
+    <string name="app_name">Panther VideoGame Store</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="datos1">Esta aplicación fue creada con fines educativos, no manejamos datos ni nos hacemos responsables del mal uso de los mismos.</string>
-    <string name="datos2">Los derechos de las imagenes perteneces exclusivamente a sus creadores.</string>
+    <string name="datos1">This application was created for educational purposes, we do not handle data or we are responsible for the misuse of them.</string>
+    <string name="datos2">The rights of the images belonged exclusively to their creators.</string>
 
-    <string name="txt_user">Usuario</string>
-    <string name="txt_name">Nombre</string>
-    <string name="txt_last_name">Apellido</string>
-    <string name="txt_phone">Teléfono</string>
-    <string name="txt_password">Contraseña</string>
-    <string name="txt_password_confirm">Confirme Contraseña</string>
-    <string name="txt_usage_policies">Antes de continuar debe aceptar nuestras políticas de uso</string>
-    <string name="txt_i_agree">Acepto</string>
-    <string name="txt_remember_user">Recordar Usuario</string>
-    <string name="txt_log_in">INICIO DE SESION</string>
-    <string name="txt_dont_user">No tienes un usuario? Registrate presionando el botón</string>
-    <string name="txt_email">Correo@email.com</string>
+    <string name="txt_user">User</string>
+    <string name="txt_name">Name</string>
+    <string name="txt_last_name">Last name</string>
+    <string name="txt_phone">Telephone</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_password_confirm">Confirm password.</string>
+    <string name="txt_usage_policies">Before continuing you must accept our use policies</string>
+    <string name="txt_i_agree">I agree</string>
+    <string name="txt_remember_user">Remember user</string>
+    <string name="txt_log_in">LOGIN</string>
+    <string name="txt_dont_user">Do not you have a user? Register by pressing the button</string>
+    <string name="txt_email">Mail@email.com.</string>
 
-    <string name="check_registro">Acepto las políticas de uso</string>
-
-
-    <string name="msg_error_user_pass">Error de usuario o contraseña</string>
-    <string name="msg_error_user_pass2">Error de usuario o contraseña</string>
-    <string name="msg_error_reg_llenar_txt">Debe completar el formulario para crear la cuenta</string>
-    <string name="msg_error_reg_user_txt">En Usuario solo caracteres alfanuméricos</string>
-    <string name="msg_error_reg_pass_txt">En Contraseña solo caracteres alfanuméricos</string>
-    <string name="msg_error_reg_name_txt">En Nombre solo Letras mayúsculas o minúsculas</string>
-    <string name="msg_error_reg_apellido_txt">En Apellido solo Letras mayúsculas o minúsculas</string>
-    <string name="msg_error_reg_telefono_txt">En Teléfono solo Números</string>
-    <string name="msg_error_reg_email_txt">En Correo solo Alfanuméricos y caracteres (. - _ @)</string>
-    <string name="msg_error_pass_comparacion">Las contraseñas deben ser iguales</string>
-    <string name="msg_error_existe_usuario">El nombre de Usuario ya existe</string>
-    <string name="msg_registro_exitoso">Registro Exitoso</string>
-    <string name="msg_registro_a_login">El registro se ha completado con exito, presione OK para ir a Inicio de sesión</string>
-    <string name="msg_registro_error_guardar">Error en Registro</string>
-    <string name="msg_debe_aceptar">Antes de continuar debe aceptar nuestras políticas de uso. Marque la casilla para aceptar</string>
-    <string name="msg_usage_policies_titulo">Políticas de Uso</string>
+    <string name="check_registro">I accept the policies of use</string>
 
 
-    <string name="menu_opcion_usuario">Configuraciones de usuario</string>
-    <string name="menu_comprar">Comprar</string>
-    <string name="menu_cerrar_sesion">Cerrar sesión</string>
+    <string name="msg_error_user_pass">User or password error</string>
+    <string name="msg_error_user_pass2">User or password error</string>
+    <string name="msg_error_reg_llenar_txt">You must complete the form to create the account</string>
+    <string name="msg_error_reg_user_txt">Only alphanumeric characters for User</string>
+    <string name="msg_error_reg_pass_txt">Only alphanumeric characters for password</string>
+    <string name="msg_error_reg_name_txt">Only uppercase or lowercase letters for name</string>
+    <string name="msg_error_reg_apellido_txt">Only uppercase or lowercase letters for lastname</string>
+    <string name="msg_error_reg_telefono_txt">Only numbers for phone</string>
+    <string name="msg_error_reg_email_txt">Only alphanumeric and characters (. - _ @) for email</string>
+    <string name="msg_error_pass_comparacion">Passwords should be the same</string>
+    <string name="msg_error_existe_usuario">Username already exist</string>
+    <string name="msg_registro_exitoso">Successful registration</string>
+    <string name="msg_registro_a_login">The record has been successfully completed, press OK to go to login</string>
+    <string name="msg_registro_error_guardar">Error in record</string>
+    <string name="msg_debe_aceptar">Before continuing you must accept our policies for use. Check the box to accept</string>
+    <string name="msg_usage_policies_titulo">Use policies</string>
 
 
-    <string name="label_sign_in">REGISTRO</string>
-    <string name="label_log_in">INICIAR SESION</string>
+    <string name="menu_opcion_usuario">User configurations</string>
+    <string name="menu_comprar">Buy</string>
+    <string name="menu_cerrar_sesion">Sign off</string>
 
-    <string name="bt_policies">POLITICAS</string>
-    <string name="bt_sign_in">REGISTRARME</string>
-    <string name="bt_log_in">INICIAR SESION</string>
 
-    <string name="frag2">Desarrollo de aplicaciones móviles Grupo 9, Equipo 2</string>
+    <string name="label_sign_in">REGISTRATION</string>
+    <string name="label_log_in">LOG IN</string>
 
-    <string name="apertura">Apertura</string>
-    <string name="cierre">Cierre</string>
+    <string name="bt_policies">Politics</string>
+    <string name="bt_sign_in">Register</string>
+    <string name="bt_log_in">LOG IN</string>
+
+    <string name="frag2">Development of mobile applications Group 9, Equipment 2</string>
+
+    <string name="apertura">Opening</string>
+    <string name="cierre">Closing</string>
 
     <string name="ok">OK</string>
-    <string name="cancelar">Cancelar</string>
-    <string name="next">Siguiente</string>
-    <string name="si">Si</string>
+    <string name="cancelar">Cancel</string>
+    <string name="next">Next</string>
+    <string name="si">Yes</string>
     <string name="no">No</string>
-    <string name="menu">Menú</string>
-    <string name="hi">Hola!</string>
+    <string name="menu">Menu</string>
+    <string name="hi">Hello!</string>
 
-    <string name="msg_confirmar_cerrar_sesion">Desea cerrar sesión?</string>
+    <string name="msg_confirmar_cerrar_sesion">Do you want to log out?</string>
+
+
+
+    <string name="DB_Categ">CATEGORY</string>
+    <string name="DB_Categ_Descr">DESCRIPTION</string>
+    <string name="DB_Utype">USERTYPE</string>
+    <string name="DB_Media">MEDIA</string>
+    <string name="DB_Paymt">PAYMENTMETHOD</string>
+    <string name="DB_Status">ORDERSTATUS</string>
+    <string name="DB_Games_Title">TITLE</string>
+    <string name="DB_Games_Descr">DESCRIPTION</string>
+
+    <string name="All_Categ">All Categories</string>
 
 </resources>
