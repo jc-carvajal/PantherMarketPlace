@@ -130,6 +130,7 @@ public class Login extends AppCompatActivity {
 
                         //Lanzar la activity
                         Intent SA=new Intent(view.getContext(),MainActivity.class);
+                        //SA.putExtra("USERNAME","NUSUARIO");
                         startActivity(SA);
                         PASS.setText("");
 
