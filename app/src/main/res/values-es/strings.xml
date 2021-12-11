@@ -23,7 +23,6 @@
 
     <string name="check_registro">Acepto las políticas de uso</string>
 
-
     <string name="msg_error_user_pass">Error de usuario o contraseña</string>
     <string name="msg_error_user_pass2">Error de usuario o contraseña</string>
     <string name="msg_error_reg_llenar_txt">Debe completar el formulario para crear la cuenta</string>
@@ -41,18 +40,18 @@
     <string name="msg_debe_aceptar">Antes de continuar debe aceptar nuestras políticas de uso. Marque la casilla para aceptar</string>
     <string name="msg_usage_policies_titulo">Políticas de Uso</string>
 
-
     <string name="menu_opcion_usuario">Configuraciones de usuario</string>
     <string name="menu_comprar">Comprar</string>
     <string name="menu_cerrar_sesion">Cerrar sesión</string>
 
-
     <string name="label_sign_in">REGISTRO</string>
     <string name="label_log_in">INICIAR SESION</string>
+    <string name="label_configurations">Configuraciones</string>
 
     <string name="bt_policies">POLITICAS</string>
     <string name="bt_sign_in">REGISTRARME</string>
     <string name="bt_log_in">INICIAR SESION</string>
+    <string name="bt_change">CAMBIAR</string>
 
     <string name="frag2">Desarrollo de aplicaciones móviles Grupo 9, Equipo 2</string>
 
@@ -68,8 +67,6 @@
     <string name="hi">Hola!</string>
 
     <string name="msg_confirmar_cerrar_sesion">Desea cerrar sesión?</string>
-
-
 
     <string name="DB_Categ">ES_CATEGORIA</string>
     <string name="DB_Categ_Descr">ES_DESCRIPCION</string>
