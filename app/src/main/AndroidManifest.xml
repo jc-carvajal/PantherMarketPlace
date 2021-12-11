@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pchronos.septimaappjava">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_ps"
@@ -10,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeptimaAppJava">
         <activity
+            android:name=".Recuperar"
+            android:exported="false"
+            android:label="@string/label_access_recovery" />/>
+        <activity
             android:name=".Configuracion"
-            android:label="@string/label_configurations"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/label_configurations" />
         <activity
             android:name=".HomePurchaseActivity"
             android:exported="false" />
@@ -22,12 +28,12 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="GRUPO 9"
+            android:label="@string/label_home"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".FormularioRegistro"
             android:exported="false"
-            android:label="REGISTRO"
+            android:label="@string/label_reg"
             android:theme="@style/Theme.SeptimaAppJava" />
         <activity
             android:name=".Login"
