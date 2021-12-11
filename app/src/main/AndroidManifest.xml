@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeptimaAppJava">
         <activity
+            android:name=".Configuracion"
+            android:label="@string/label_configurations"
+            android:exported="false" />
+        <activity
             android:name=".HomePurchaseActivity"
             android:exported="false" />
         <activity
