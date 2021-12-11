@@ -37,6 +37,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-firestore:24.0.0'
+    implementation files('..\\libs\\activation.jar')
+    implementation files('..\\libs\\additionnal.jar')
+    implementation files('..\\libs\\mail.jar')
     implementation platform('com.google.firebase:firebase-bom:29.0.1')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.android.gms:play-services-analytics-impl:17.0.0'

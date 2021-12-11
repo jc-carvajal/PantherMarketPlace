@@ -130,6 +130,7 @@ public class Login extends AppCompatActivity {
 
                         //Lanzar la activity
                         Intent SA=new Intent(view.getContext(),MainActivity.class);
+                        //SA.putExtra("USERNAME","NUSUARIO");
                         startActivity(SA);
                         PASS.setText("");
 
@@ -306,5 +307,10 @@ public class Login extends AppCompatActivity {
     public void crearusuariofirebase(View view) {
         Intent FR=new Intent(this,pruebas.class);
         startActivity(FR);
+    }
+
+    public void recuperarPassword(View view) {
+        Intent FP=new Intent(this,Recuperar.class);
+        startActivity(FP);
     }
 }
