@@ -12,9 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeptimaAppJava">
         <activity
+            android:name=".ProductDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Recuperar"
             android:exported="false"
-            android:label="@string/label_access_recovery" />/>
+            android:label="@string/label_access_recovery" />
+        <activity
+            android:name=".Configuracion"
+            android:exported="false"
+            android:label="@string/label_configurations" />
         <activity
             android:name=".Configuracion"
             android:exported="false"

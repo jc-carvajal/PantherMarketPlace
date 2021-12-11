@@ -1,5 +1,6 @@
 package com.pchronos.septimaappjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -168,4 +169,9 @@ public class HomePurchaseActivity extends AppCompatActivity
         ProductsList.setAdapter(Adapter);
     }
 
+    public void LaunchProductDetailsActivity(View view)
+    {
+        Intent IntentProductDetails = new Intent(this, ProductDetailsActivity.class);
+        startActivity(IntentProductDetails);
+    }
 }
