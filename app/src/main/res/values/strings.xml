@@ -13,7 +13,12 @@
     <string name="txt_last_name">Last name</string>
     <string name="txt_phone">Telephone</string>
     <string name="txt_password">Password</string>
+    <string name="txt_new_password">New Password</string>
+    <string name="txt_insert_password">Insert Password</string>
+    <string name="txt_insert_new_password">Insert New Password</string>
+    <string name="txt_confirm_new_password">Confirm New Password</string>
     <string name="txt_password_confirm">Confirm password.</string>
+    <string name="txt_change_password">CHANGE PASSWORD</string>
     <string name="txt_usage_policies">Before continuing you must accept our use policies</string>
     <string name="txt_i_agree">I agree</string>
     <string name="txt_remember_user">Remember user</string>
@@ -25,6 +30,7 @@
 
     <string name="msg_error_user_pass">User or password error</string>
     <string name="msg_error_user_pass2">User or password error</string>
+    <string name="msg_error_user_pass3">Password error</string>
     <string name="msg_error_reg_llenar_txt">You must complete the form to create the account</string>
     <string name="msg_error_reg_user_txt">Only alphanumeric characters for User</string>
     <string name="msg_error_reg_pass_txt">Only alphanumeric characters for password</string>
@@ -33,12 +39,16 @@
     <string name="msg_error_reg_telefono_txt">Only numbers for phone</string>
     <string name="msg_error_reg_email_txt">Only alphanumeric and characters (. - _ @) for email</string>
     <string name="msg_error_pass_comparacion">Passwords should be the same</string>
+    <string name="msg_error_new_pass_comparacion">New passwords should be the same</string>
     <string name="msg_error_existe_usuario">Username already exist</string>
     <string name="msg_registro_exitoso">Successful registration</string>
     <string name="msg_registro_a_login">The record has been successfully completed, press OK to go to login</string>
     <string name="msg_registro_error_guardar">Error in record</string>
     <string name="msg_debe_aceptar">Before continuing you must accept our policies for use. Check the box to accept</string>
     <string name="msg_usage_policies_titulo">Use policies</string>
+    <string name="msg_error_pass_change_llenar_txt">Fill the form to change password</string>
+    <string name="msg_error_guardar">Error on saving</string>
+    <string name="msg_change_pass_exitoso">Password Change Succeded</string>
 
     <string name="menu_opcion_usuario">User configurations</string>
     <string name="menu_comprar">Buy</string>
@@ -78,5 +88,7 @@
     <string name="DB_Games_Descr">DESCRIPTION</string>
 
     <string name="All_Categ">All Categories</string>
+
+
 
 </resources>
