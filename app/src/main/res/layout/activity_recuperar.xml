@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/design_default_color_primary"
+    android:background="@drawable/fm1_0"
     tools:context=".Recuperar">
 
     <LinearLayout
@@ -29,6 +29,25 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_tittle_recovery"
+
+        android:textStyle="bold"
+        android:textSize="25dp"
+
+        />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,6 +55,8 @@
         android:inputType="text"
         android:hint="@string/txt_user"
         android:background="@color/blanco_clear10"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"
         />
 
     <TextView
@@ -44,8 +65,8 @@
         android:background="@color/blanco_clear20"
         android:text="@string/txt_recuperar1"
         android:paddingHorizontal="5dp"
-
-
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"
         />
 
     <Button
@@ -53,7 +74,9 @@
         android:layout_height="wrap_content"
         android:text="generar código de recuperación"
         android:onClick="coderandom"
-        android:id="@+id/random"/>
+        android:id="@+id/random"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"/>
 
 
 
@@ -70,6 +93,8 @@
         android:inputType="text"
         android:background="@color/blanco_clear10"
         android:hint="@string/txt_rec_code"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"
         />
 
     <EditText
@@ -79,6 +104,8 @@
         android:inputType="textPassword"
         android:hint="@string/txt_new_password"
         android:background="@color/blanco_clear10"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"
         />
 
     <EditText
@@ -88,6 +115,8 @@
         android:inputType="textPassword"
         android:hint="@string/txt_confirm_new_password"
         android:background="@color/blanco_clear10"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"
         />
 
 
@@ -101,7 +130,9 @@
         android:layout_height="wrap_content"
         android:text="@string/txt_change_password"
         android:onClick="cambiarPassword"
-        android:id="@+id/re_pass"/>
+        android:id="@+id/re_pass"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
