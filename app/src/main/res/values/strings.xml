@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">Panther VideoGame Store</string>
 
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
 
     <string name="datos1">This application was created for educational purposes, we do not handle data or we are responsible for the misuse of them.</string>
     <string name="datos2">The rights of the images belonged exclusively to their creators.</string>
@@ -14,9 +12,9 @@
     <string name="txt_phone">Telephone</string>
     <string name="txt_password">Password</string>
     <string name="txt_new_password">New Password</string>
-    <string name="txt_insert_password">Insert Password</string>
-    <string name="txt_insert_new_password">Insert New Password</string>
-    <string name="txt_confirm_new_password">Confirm New Password</string>
+    <string name="txt_insert_password">Enter current password</string>
+    <string name="txt_insert_new_password">Enter new password</string>
+    <string name="txt_confirm_new_password">Confirm new password.</string>
     <string name="txt_password_confirm">Confirm password.</string>
     <string name="txt_change_password">CHANGE PASSWORD</string>
     <string name="txt_usage_policies">Before continuing you must accept our use policies</string>
@@ -26,74 +24,31 @@
     <string name="txt_dont_user">Do not you have a user? Register by pressing the button</string>
     <string name="txt_email">Mail@email.com.</string>
 
+    <string name="txt_tittle_recovery">RECOVER ACCOUNT</string>
+
     <string name="check_registro">I accept the policies of use</string>
 
     <string name="msg_error_user_pass">User or password error</string>
     <string name="msg_error_user_pass2">User or password error</string>
     <string name="msg_error_user_pass3">Password error</string>
     <string name="msg_error_reg_llenar_txt">You must complete the form to create the account</string>
-    <string name="msg_error_reg_user_txt">Only alphanumeric characters for User</string>
-    <string name="msg_error_reg_pass_txt">Only alphanumeric characters for password</string>
-    <string name="msg_error_reg_name_txt">Only uppercase or lowercase letters for name</string>
-    <string name="msg_error_reg_apellido_txt">Only uppercase or lowercase letters for lastname</string>
-    <string name="msg_error_reg_telefono_txt">Only numbers for phone</string>
-    <string name="msg_error_reg_email_txt">Only alphanumeric and characters (. - _ @) for email</string>
+    <string name="msg_error_reg_user_txt">Only alphanumeric characters in User</string>
+    <string name="msg_error_reg_pass_txt">Only alphanumeric characters in password</string>
+    <string name="msg_error_reg_name_txt">Only uppercase or lowercase letters in name</string>
+    <string name="msg_error_reg_apellido_txt">Only uppercase or lowercase letters in Lastname</string>
+    <string name="msg_error_reg_telefono_txt">Only numbers in phone</string>
+    <string name="msg_error_reg_email_txt">Only alphanumeric and characters (. - _ @) in mail</string>
     <string name="msg_error_pass_comparacion">Passwords should be the same</string>
-    <string name="msg_error_new_pass_comparacion">New passwords should be the same</string>
+    <string name="msg_error_new_pass_comparacion">The new passwords must be the same</string>
     <string name="msg_error_existe_usuario">Username already exist</string>
     <string name="msg_registro_exitoso">Successful registration</string>
     <string name="msg_registro_a_login">The record has been successfully completed, press OK to go to login</string>
     <string name="msg_registro_error_guardar">Error in record</string>
     <string name="msg_debe_aceptar">Before continuing you must accept our policies for use. Check the box to accept</string>
     <string name="msg_usage_policies_titulo">Use policies</string>
-    <string name="msg_error_pass_change_llenar_txt">Fill the form to change password</string>
-    <string name="msg_error_guardar">Error on saving</string>
-    <string name="msg_change_pass_exitoso">Password Change Succeded</string>
-
-    <string name="txt_user">Usuario</string>
-    <string name="txt_name">Nombre</string>
-    <string name="txt_last_name">Apellido</string>
-    <string name="txt_phone">Teléfono</string>
-    <string name="txt_password">Contraseña</string>
-    <string name="txt_new_password">Nueva Contraseña</string>
-    <string name="txt_insert_password">Ingrese Contraseña Actual</string>
-    <string name="txt_insert_new_password">Ingrese Nueva Contraseña</string>
-    <string name="txt_confirm_new_password">Confirme Nueva Contraseña</string>
-    <string name="txt_password_confirm">Confirme Contraseña</string>
-    <string name="txt_change_password">CAMBIAR CONTRASEÑA</string>
-    <string name="txt_usage_policies">Antes de continuar debe aceptar nuestras políticas de uso</string>
-    <string name="txt_i_agree">Acepto</string>
-    <string name="txt_remember_user">Recordar Usuario</string>
-    <string name="txt_log_in">INICIO DE SESION</string>
-    <string name="txt_dont_user">No tienes un usuario? Registrate presionando el botón</string>
-    <string name="txt_email">Correo@email.com</string>
-
-    <string name="txt_tittle_recovery">RECUPERAR CUENTA</string>
-
-
-    <string name="check_registro">Acepto las políticas de uso</string>
-
-    <string name="msg_error_user_pass">Error de usuario o contraseña</string>
-    <string name="msg_error_user_pass2">Error de usuario o contraseña</string>
-    <string name="msg_error_user_pass3">Error de contraseña</string>
-    <string name="msg_error_reg_llenar_txt">Debe completar el formulario para crear la cuenta</string>
-    <string name="msg_error_reg_user_txt">En Usuario solo caracteres alfanuméricos</string>
-    <string name="msg_error_reg_pass_txt">En Contraseña solo caracteres alfanuméricos</string>
-    <string name="msg_error_reg_name_txt">En Nombre solo Letras mayúsculas o minúsculas</string>
-    <string name="msg_error_reg_apellido_txt">En Apellido solo Letras mayúsculas o minúsculas</string>
-    <string name="msg_error_reg_telefono_txt">En Teléfono solo Números</string>
-    <string name="msg_error_reg_email_txt">En Correo solo Alfanuméricos y caracteres (. - _ @)</string>
-    <string name="msg_error_pass_comparacion">Las contraseñas deben ser iguales</string>
-    <string name="msg_error_new_pass_comparacion">Las nuevas contraseñas deben ser iguales</string>
-    <string name="msg_error_existe_usuario">El nombre de Usuario ya existe</string>
-    <string name="msg_registro_exitoso">Registro Exitoso</string>
-    <string name="msg_registro_a_login">El registro se ha completado con exito, presione OK para ir a Inicio de sesión</string>
-    <string name="msg_registro_error_guardar">Error en Registro</string>
-    <string name="msg_debe_aceptar">Antes de continuar debe aceptar nuestras políticas de uso. Marque la casilla para aceptar</string>
-    <string name="msg_usage_policies_titulo">Políticas de Uso</string>
-    <string name="msg_error_pass_change_llenar_txt">Debe completar el formulario para cambiar la contraseña</string>
-    <string name="msg_error_guardar">Error al Guardar</string>
-    <string name="msg_change_pass_exitoso">Cambio de Contraseña Exitoso</string>
+    <string name="msg_error_pass_change_llenar_txt">You must complete the form to change the password</string>
+    <string name="msg_error_guardar">Saveful error</string>
+    <string name="msg_change_pass_exitoso">Successful password change</string>
 
     <string name="menu_opcion_usuario">User configurations</string>
     <string name="menu_comprar">Buy</string>
@@ -101,26 +56,18 @@
 
     <string name="label_sign_in">REGISTRATION</string>
     <string name="label_log_in">LOG IN</string>
-    <string name="label_configurations">Configurations</string>
+    <string name="label_home">START</string>
+    <string name="label_configurations">CONFIGURATIONS</string>
+    <string name="label_access_recovery">RETRIEVE ACCESS</string>
+    <string name="label_reg">REGISTRATION</string>
 
-    <string name="bt_policies">Politics</string>
-    <string name="bt_sign_in">Register</string>
+    <string name="bt_policies">POLITICS</string>
+    <string name="bt_sign_in">REGISTER</string>
     <string name="bt_log_in">LOG IN</string>
     <string name="bt_change">CHANGE</string>
-    <string name="label_sign_in">REGISTRO</string>
-    <string name="label_log_in">INICIAR SESION</string>
-    <string name="label_home">INICIO</string>
-    <string name="label_configurations">CONFIGURACIONES</string>
-    <string name="label_access_recovery">RECUPERAR ACCESO</string>
-    <string name="label_reg">REGISTRO</string>
+    <string name="bt_change_pass">CHANGE PASSWORD</string>
 
-    <string name="bt_policies">POLITICAS</string>
-    <string name="bt_sign_in">REGISTRARME</string>
-    <string name="bt_log_in">INICIAR SESION</string>
-    <string name="bt_change">CAMBIAR</string>
-    <string name="bt_change_pass">CAMBIAR CONTRASEÑA</string>
-
-    <string name="frag2">Development of mobile applications Group 9, Equipment 2</string>
+    <string name="frag2">Development of mobile applications Group 9, Team 2</string>
 
     <string name="apertura">Opening</string>
     <string name="cierre">Closing</string>
@@ -135,6 +82,17 @@
 
     <string name="msg_confirmar_cerrar_sesion">Do you want to log out?</string>
 
+    <string name="txt_recuperar1">To recover your password you must generate a recovery code, entering the user, pressing the button and fill out the form</string>
+
+    <string name="msg_codigo_generado">Recovery code generated</string>
+    <string name="msg_codigo_generado_mail">If the user entered exists, the recovery code will be sent to the registered email</string>
+
+    <string name="mail_recovery1">A recovery code has been requested, the code is: "</string>
+    <string name="mail_recovery2">Always use the most recent recovery code</string>
+
+    <string name="msg_error_rec_code">Wrong code</string>
+    <string name="txt_rec_code">Recovery code</string>
+
     <string name="DB_Categ">CATEGORY</string>
     <string name="DB_Categ_Descr">DESCRIPTION</string>
     <string name="DB_Utype">USERTYPE</string>
@@ -148,17 +106,128 @@
 
 
 
-    <string name="txt_recuperar1">Para recuperar su contraseña debe generar un código de recuperacíon, introduciendo el Usuario, presionando el botón y llenar el formulario</string>
+    <string name="Disponible_Juan_01">In English</string>
+    <string name="Disponible_Juan_02">In English</string>
+    <string name="Disponible_Juan_03">In English</string>
+    <string name="Disponible_Juan_04">In English</string>
+    <string name="Disponible_Juan_05">In English</string>
+    <string name="Disponible_Juan_06">In English</string>
+    <string name="Disponible_Juan_07">In English</string>
+    <string name="Disponible_Juan_08">In English</string>
+    <string name="Disponible_Juan_09">In English</string>
+    <string name="Disponible_Juan_10">In English</string>
+    <string name="Disponible_Juan_11">In English</string>
+    <string name="Disponible_Juan_12">In English</string>
+    <string name="Disponible_Juan_13">In English</string>
+    <string name="Disponible_Juan_14">In English</string>
+    <string name="Disponible_Juan_15">In English</string>
+    <string name="Disponible_Juan_16">In English</string>
+    <string name="Disponible_Juan_17">In English</string>
+    <string name="Disponible_Juan_18">In English</string>
+    <string name="Disponible_Juan_19">In English</string>
+    <string name="Disponible_Juan_20">In English</string>
+    <string name="Disponible_Juan_21">In English</string>
+    <string name="Disponible_Juan_22">In English</string>
+    <string name="Disponible_Juan_23">In English</string>
+    <string name="Disponible_Juan_24">In English</string>
+    <string name="Disponible_Juan_25">In English</string>
+    <string name="Disponible_Juan_26">In English</string>
+    <string name="Disponible_Juan_27">In English</string>
+    <string name="Disponible_Juan_28">In English</string>
+    <string name="Disponible_Juan_29">In English</string>
+    <string name="Disponible_Juan_30">In English</string>
 
+    <string name="Disponible_Pedro_01">In English</string>
+    <string name="Disponible_Pedro_02">In English</string>
+    <string name="Disponible_Pedro_03">In English</string>
+    <string name="Disponible_Pedro_04">In English</string>
+    <string name="Disponible_Pedro_05">In English</string>
+    <string name="Disponible_Pedro_06">In English</string>
+    <string name="Disponible_Pedro_07">In English</string>
+    <string name="Disponible_Pedro_08">In English</string>
+    <string name="Disponible_Pedro_09">In English</string>
+    <string name="Disponible_Pedro_10">In English</string>
+    <string name="Disponible_Pedro_11">In English</string>
+    <string name="Disponible_Pedro_12">In English</string>
+    <string name="Disponible_Pedro_13">In English</string>
+    <string name="Disponible_Pedro_14">In English</string>
+    <string name="Disponible_Pedro_15">In English</string>
+    <string name="Disponible_Pedro_16">In English</string>
+    <string name="Disponible_Pedro_17">In English</string>
+    <string name="Disponible_Pedro_18">In English</string>
+    <string name="Disponible_Pedro_19">In English</string>
+    <string name="Disponible_Pedro_20">In English</string>
+    <string name="Disponible_Pedro_21">In English</string>
+    <string name="Disponible_Pedro_22">In English</string>
+    <string name="Disponible_Pedro_23">In English</string>
+    <string name="Disponible_Pedro_24">In English</string>
+    <string name="Disponible_Pedro_25">In English</string>
+    <string name="Disponible_Pedro_26">In English</string>
+    <string name="Disponible_Pedro_27">In English</string>
+    <string name="Disponible_Pedro_28">In English</string>
+    <string name="Disponible_Pedro_29">In English</string>
+    <string name="Disponible_Pedro_30">In English</string>
 
+    <string name="Disponible_Robin_01">In English</string>
+    <string name="Disponible_Robin_02">In English</string>
+    <string name="Disponible_Robin_03">In English</string>
+    <string name="Disponible_Robin_04">In English</string>
+    <string name="Disponible_Robin_05">In English</string>
+    <string name="Disponible_Robin_06">In English</string>
+    <string name="Disponible_Robin_07">In English</string>
+    <string name="Disponible_Robin_08">In English</string>
+    <string name="Disponible_Robin_09">In English</string>
+    <string name="Disponible_Robin_10">In English</string>
+    <string name="Disponible_Robin_11">In English</string>
+    <string name="Disponible_Robin_12">In English</string>
+    <string name="Disponible_Robin_13">In English</string>
+    <string name="Disponible_Robin_14">In English</string>
+    <string name="Disponible_Robin_15">In English</string>
+    <string name="Disponible_Robin_16">In English</string>
+    <string name="Disponible_Robin_17">In English</string>
+    <string name="Disponible_Robin_18">In English</string>
+    <string name="Disponible_Robin_19">In English</string>
+    <string name="Disponible_Robin_20">In English</string>
+    <string name="Disponible_Robin_21">In English</string>
+    <string name="Disponible_Robin_22">In English</string>
+    <string name="Disponible_Robin_23">In English</string>
+    <string name="Disponible_Robin_24">In English</string>
+    <string name="Disponible_Robin_25">In English</string>
+    <string name="Disponible_Robin_26">In English</string>
+    <string name="Disponible_Robin_27">In English</string>
+    <string name="Disponible_Robin_28">In English</string>
+    <string name="Disponible_Robin_29">In English</string>
+    <string name="Disponible_Robin_30">In English</string>
 
-    <string name="msg_codigo_generado">Código de Recuperación Generado</string>
-    <string name="msg_codigo_generado_mail">Si el usuario ingresado existe, se enviará el código de recuperación al correo electronico de la cuenta</string>
-
-    <string name="mail_recovery1">Se ha solicitado un código de recuperación, su código es: "</string>
-    <string name="mail_recovery2">" Siempre use el código de recuperación mas reciente</string>
-
-    <string name="msg_error_rec_code">Código Erroneo</string>
-    <string name="txt_rec_code">Código de recuperación</string>
+    <string name="Disponible_Henry_01">In English</string>
+    <string name="Disponible_Henry_02">In English</string>
+    <string name="Disponible_Henry_03">In English</string>
+    <string name="Disponible_Henry_04">In English</string>
+    <string name="Disponible_Henry_05">In English</string>
+    <string name="Disponible_Henry_06">In English</string>
+    <string name="Disponible_Henry_07">In English</string>
+    <string name="Disponible_Henry_08">In English</string>
+    <string name="Disponible_Henry_09">In English</string>
+    <string name="Disponible_Henry_10">In English</string>
+    <string name="Disponible_Henry_11">In English</string>
+    <string name="Disponible_Henry_12">In English</string>
+    <string name="Disponible_Henry_13">In English</string>
+    <string name="Disponible_Henry_14">In English</string>
+    <string name="Disponible_Henry_15">In English</string>
+    <string name="Disponible_Henry_16">In English</string>
+    <string name="Disponible_Henry_17">In English</string>
+    <string name="Disponible_Henry_18">In English</string>
+    <string name="Disponible_Henry_19">In English</string>
+    <string name="Disponible_Henry_20">In English</string>
+    <string name="Disponible_Henry_21">In English</string>
+    <string name="Disponible_Henry_22">In English</string>
+    <string name="Disponible_Henry_23">In English</string>
+    <string name="Disponible_Henry_24">In English</string>
+    <string name="Disponible_Henry_25">In English</string>
+    <string name="Disponible_Henry_26">In English</string>
+    <string name="Disponible_Henry_27">In English</string>
+    <string name="Disponible_Henry_28">In English</string>
+    <string name="Disponible_Henry_29">In English</string>
+    <string name="Disponible_Henry_30">In English</string>
 
 </resources>

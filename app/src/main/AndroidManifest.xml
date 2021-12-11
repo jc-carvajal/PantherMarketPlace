@@ -23,10 +23,6 @@
             android:exported="false"
             android:label="@string/label_configurations" />
         <activity
-            android:name=".Configuracion"
-            android:exported="false"
-            android:label="@string/label_configurations" />
-        <activity
             android:name=".HomePurchaseActivity"
             android:exported="false" />
         <activity
