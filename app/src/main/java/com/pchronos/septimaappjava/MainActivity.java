@@ -4,6 +4,10 @@ import static android.view.Gravity.CENTER;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -30,6 +34,14 @@ import android.widget.Toast;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -134,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.op2nav:
                 T1.setText("Comprar");
-                Intent CH=new Intent(this,ComprasHome.class);
+                Intent CH=new Intent(this, HomePurchaseActivity.class);
                 startActivity(CH);
                 break;
 

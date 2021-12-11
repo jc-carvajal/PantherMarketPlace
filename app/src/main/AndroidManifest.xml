@@ -20,7 +20,7 @@
             android:exported="false"
             android:label="@string/label_configurations" />
         <activity
-            android:name=".ComprasHome"
+            android:name=".HomePurchaseActivity"
             android:exported="false" />
         <activity
             android:name=".pruebas"
