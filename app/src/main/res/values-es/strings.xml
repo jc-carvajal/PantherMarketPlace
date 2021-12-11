@@ -1,8 +1,6 @@
 <resources>
-    <string name="app_name">Tienda de Video Juegos Panther</string>
+    <string name="app_name">Tienda de VideoJuegos Panther</string>
 
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hola fragmento vacío</string>
 
     <string name="datos1">Esta aplicación fue creada con fines educativos, no manejamos datos ni nos hacemos responsables del mal uso de los mismos.</string>
@@ -25,6 +23,8 @@
     <string name="txt_log_in">INICIO DE SESION</string>
     <string name="txt_dont_user">No tienes un usuario? Registrate presionando el botón</string>
     <string name="txt_email">Correo@email.com</string>
+
+    <string name="txt_tittle_recovery">RECUPERAR CUENTA</string>
 
     <string name="check_registro">Acepto las políticas de uso</string>
 
@@ -56,12 +56,16 @@
 
     <string name="label_sign_in">REGISTRO</string>
     <string name="label_log_in">INICIAR SESION</string>
-    <string name="label_configurations">Configuraciones</string>
+    <string name="label_home">INICIO</string>
+    <string name="label_configurations">CONFIGURACIONES</string>
+    <string name="label_access_recovery">RECUPERAR ACCESO</string>
+    <string name="label_reg">REGISTRO</string>
 
     <string name="bt_policies">POLITICAS</string>
     <string name="bt_sign_in">REGISTRARME</string>
     <string name="bt_log_in">INICIAR SESION</string>
     <string name="bt_change">CAMBIAR</string>
+    <string name="bt_change_pass">CAMBIAR CONTRASEÑA</string>
 
     <string name="frag2">Desarrollo de aplicaciones móviles Grupo 9, Equipo 2</string>
 
@@ -78,6 +82,17 @@
 
     <string name="msg_confirmar_cerrar_sesion">Desea cerrar sesión?</string>
 
+    <string name="txt_recuperar1">Para recuperar su contraseña debe generar un código de recuperacíon, introduciendo el Usuario, presionando el botón y llenar el formulario</string>
+
+    <string name="msg_codigo_generado">Código de Recuperación Generado</string>
+    <string name="msg_codigo_generado_mail">Si el usuario ingresado existe, se enviará el código de recuperación al correo electronico de la cuenta</string>
+
+    <string name="mail_recovery1">Se ha solicitado un código de recuperación, su código es: "</string>
+    <string name="mail_recovery2"> Siempre use el código de recuperación mas reciente</string>
+
+    <string name="msg_error_rec_code">Código Erroneo</string>
+    <string name="txt_rec_code">Código de recuperación</string>
+
     <string name="DB_Categ">ES_CATEGORIA</string>
     <string name="DB_Categ_Descr">ES_DESCRIPCION</string>
     <string name="DB_Utype">ES_TIPOUSUARIO</string>
@@ -90,5 +105,129 @@
     <string name="All_Categ">Todas las Categorías</string>
 
 
+
+    <string name="Disponible_Juan_01">En Español</string>
+    <string name="Disponible_Juan_02">En Español</string>
+    <string name="Disponible_Juan_03">En Español</string>
+    <string name="Disponible_Juan_04">En Español</string>
+    <string name="Disponible_Juan_05">En Español</string>
+    <string name="Disponible_Juan_06">En Español</string>
+    <string name="Disponible_Juan_07">En Español</string>
+    <string name="Disponible_Juan_08">En Español</string>
+    <string name="Disponible_Juan_09">En Español</string>
+    <string name="Disponible_Juan_10">En Español</string>
+    <string name="Disponible_Juan_11">En Español</string>
+    <string name="Disponible_Juan_12">En Español</string>
+    <string name="Disponible_Juan_13">En Español</string>
+    <string name="Disponible_Juan_14">En Español</string>
+    <string name="Disponible_Juan_15">En Español</string>
+    <string name="Disponible_Juan_16">En Español</string>
+    <string name="Disponible_Juan_17">En Español</string>
+    <string name="Disponible_Juan_18">En Español</string>
+    <string name="Disponible_Juan_19">En Español</string>
+    <string name="Disponible_Juan_20">En Español</string>
+    <string name="Disponible_Juan_21">En Español</string>
+    <string name="Disponible_Juan_22">En Español</string>
+    <string name="Disponible_Juan_23">En Español</string>
+    <string name="Disponible_Juan_24">En Español</string>
+    <string name="Disponible_Juan_25">En Español</string>
+    <string name="Disponible_Juan_26">En Español</string>
+    <string name="Disponible_Juan_27">En Español</string>
+    <string name="Disponible_Juan_28">En Español</string>
+    <string name="Disponible_Juan_29">En Español</string>
+    <string name="Disponible_Juan_30">En Español</string>
+
+    <string name="Disponible_Pedro_01">En Español</string>
+    <string name="Disponible_Pedro_02">En Español</string>
+    <string name="Disponible_Pedro_03">En Español</string>
+    <string name="Disponible_Pedro_04">En Español</string>
+    <string name="Disponible_Pedro_05">En Español</string>
+    <string name="Disponible_Pedro_06">En Español</string>
+    <string name="Disponible_Pedro_07">En Español</string>
+    <string name="Disponible_Pedro_08">En Español</string>
+    <string name="Disponible_Pedro_09">En Español</string>
+    <string name="Disponible_Pedro_10">En Español</string>
+    <string name="Disponible_Pedro_11">En Español</string>
+    <string name="Disponible_Pedro_12">En Español</string>
+    <string name="Disponible_Pedro_13">En Español</string>
+    <string name="Disponible_Pedro_14">En Español</string>
+    <string name="Disponible_Pedro_15">En Español</string>
+    <string name="Disponible_Pedro_16">En Español</string>
+    <string name="Disponible_Pedro_17">En Español</string>
+    <string name="Disponible_Pedro_18">En Español</string>
+    <string name="Disponible_Pedro_19">En Español</string>
+    <string name="Disponible_Pedro_20">En Español</string>
+    <string name="Disponible_Pedro_21">En Español</string>
+    <string name="Disponible_Pedro_22">En Español</string>
+    <string name="Disponible_Pedro_23">En Español</string>
+    <string name="Disponible_Pedro_24">En Español</string>
+    <string name="Disponible_Pedro_25">En Español</string>
+    <string name="Disponible_Pedro_26">En Español</string>
+    <string name="Disponible_Pedro_27">En Español</string>
+    <string name="Disponible_Pedro_28">En Español</string>
+    <string name="Disponible_Pedro_29">En Español</string>
+    <string name="Disponible_Pedro_30">En Español</string>
+
+    <string name="Disponible_Robin_01">En Español</string>
+    <string name="Disponible_Robin_02">En Español</string>
+    <string name="Disponible_Robin_03">En Español</string>
+    <string name="Disponible_Robin_04">En Español</string>
+    <string name="Disponible_Robin_05">En Español</string>
+    <string name="Disponible_Robin_06">En Español</string>
+    <string name="Disponible_Robin_07">En Español</string>
+    <string name="Disponible_Robin_08">En Español</string>
+    <string name="Disponible_Robin_09">En Español</string>
+    <string name="Disponible_Robin_10">En Español</string>
+    <string name="Disponible_Robin_11">En Español</string>
+    <string name="Disponible_Robin_12">En Español</string>
+    <string name="Disponible_Robin_13">En Español</string>
+    <string name="Disponible_Robin_14">En Español</string>
+    <string name="Disponible_Robin_15">En Español</string>
+    <string name="Disponible_Robin_16">En Español</string>
+    <string name="Disponible_Robin_17">En Español</string>
+    <string name="Disponible_Robin_18">En Español</string>
+    <string name="Disponible_Robin_19">En Español</string>
+    <string name="Disponible_Robin_20">En Español</string>
+    <string name="Disponible_Robin_21">En Español</string>
+    <string name="Disponible_Robin_22">En Español</string>
+    <string name="Disponible_Robin_23">En Español</string>
+    <string name="Disponible_Robin_24">En Español</string>
+    <string name="Disponible_Robin_25">En Español</string>
+    <string name="Disponible_Robin_26">En Español</string>
+    <string name="Disponible_Robin_27">En Español</string>
+    <string name="Disponible_Robin_28">En Español</string>
+    <string name="Disponible_Robin_29">En Español</string>
+    <string name="Disponible_Robin_30">En Español</string>
+
+    <string name="Disponible_Henry_01">En Español</string>
+    <string name="Disponible_Henry_02">En Español</string>
+    <string name="Disponible_Henry_03">En Español</string>
+    <string name="Disponible_Henry_04">En Español</string>
+    <string name="Disponible_Henry_05">En Español</string>
+    <string name="Disponible_Henry_06">En Español</string>
+    <string name="Disponible_Henry_07">En Español</string>
+    <string name="Disponible_Henry_08">En Español</string>
+    <string name="Disponible_Henry_09">En Español</string>
+    <string name="Disponible_Henry_10">En Español</string>
+    <string name="Disponible_Henry_11">En Español</string>
+    <string name="Disponible_Henry_12">En Español</string>
+    <string name="Disponible_Henry_13">En Español</string>
+    <string name="Disponible_Henry_14">En Español</string>
+    <string name="Disponible_Henry_15">En Español</string>
+    <string name="Disponible_Henry_16">En Español</string>
+    <string name="Disponible_Henry_17">En Español</string>
+    <string name="Disponible_Henry_18">En Español</string>
+    <string name="Disponible_Henry_19">En Español</string>
+    <string name="Disponible_Henry_20">En Español</string>
+    <string name="Disponible_Henry_21">En Español</string>
+    <string name="Disponible_Henry_22">En Español</string>
+    <string name="Disponible_Henry_23">En Español</string>
+    <string name="Disponible_Henry_24">En Español</string>
+    <string name="Disponible_Henry_25">En Español</string>
+    <string name="Disponible_Henry_26">En Español</string>
+    <string name="Disponible_Henry_27">En Español</string>
+    <string name="Disponible_Henry_28">En Español</string>
+    <string name="Disponible_Henry_29">En Español</string>
+    <string name="Disponible_Henry_30">En Español</string>
 
 </resources>
