@@ -307,4 +307,9 @@ public class Login extends AppCompatActivity {
         Intent FR=new Intent(this,pruebas.class);
         startActivity(FR);
     }
+
+    public void recuperarPassword(View view) {
+        Intent FP=new Intent(this,Recuperar.class);
+        startActivity(FP);
+    }
 }
