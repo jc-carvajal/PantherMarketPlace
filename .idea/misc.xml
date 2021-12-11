@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_compras_home2.xml" value="0.209375" />
+        <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_home_purchase.xml" value="0.21965579710144928" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_purchase_home.xml" value="0.209375" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/product_card_view.xml" value="0.209375" />
+        <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/z_activity_purchase_home.xml" value="0.21965579710144928" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/menu/nav_menu.xml" value="0.209375" />
         <entry key="..\:/Apps/AndroidStudioProjects/Pedro/Marketplace/app/src/main/res/layout/activity_main.xml" value="0.19655797101449277" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/Marketplace/app/src/main/res/layout/activity_formulario_registro.xml" value="0.25" />

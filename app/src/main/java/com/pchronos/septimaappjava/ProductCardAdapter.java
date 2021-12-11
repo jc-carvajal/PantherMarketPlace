@@ -57,8 +57,10 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
     {
         holder.ProductName.setText(Products.get(position).Product);
         holder.ProductDescription.setText(Products.get(position).Description);
-        ImageURL = Products.get(position).ImageCode;
+        //holder.ProductImage.setImageResource(R.drawable.ic_launcher_background);
         //holder.ProductImage.setImageResource(Products.get(position).ImageCode);
+        ImageURL = Products.get(position).ImageCode;
+
         if (ImageURL.isEmpty())
         {
             holder.ProductImage.setImageResource(R.drawable.ic_launcher_background);
@@ -67,6 +69,7 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
         {
             Glide.with(holder.itemView).load(ImageURL).into(holder.ProductImage);
         }
+
     }
 
     @Override

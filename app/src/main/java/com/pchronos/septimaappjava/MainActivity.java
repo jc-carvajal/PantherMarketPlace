@@ -2,20 +2,19 @@ package com.pchronos.septimaappjava;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
-import com.google.android.material.navigation.NavigationView;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
-import android.view.MenuItem;
-import android.view.ViewDebug;
-import android.widget.TextView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import java.io.StringWriter;
+import com.google.android.material.navigation.NavigationView;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.op2nav:
                 T1.setText("Comprar");
-                Intent CH=new Intent(this,ComprasHome.class);
+                Intent CH=new Intent(this, HomePurchaseActivity.class);
                 startActivity(CH);
                 break;
 
