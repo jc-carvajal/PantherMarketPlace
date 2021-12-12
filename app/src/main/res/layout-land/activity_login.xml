@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fm1_0_land"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/titulo_img_t" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25dp"
+                    android:layout_gravity="center"
+                    android:text="@string/txt_log_in"
+
+                    android:textStyle="bold"
+                    />
+
+                <EditText
+                    android:id="@+id/inicio_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/blanco_clear10"
+                    android:hint="@string/txt_user"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textSize="24dp"/>
+
+
+
+
+
+                <EditText
+                    android:id="@+id/inicio_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/blanco_clear10"
+                    android:hint="@string/txt_password"
+
+                    android:inputType="textPassword"
+                    android:textAlignment="center"
+                    android:textSize="24dp"/>
+
+                <CheckBox
+                    android:id="@+id/check_recordar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txt_remember_user"
+
+                    android:background="@color/blanco_clear20"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:gravity="center|bottom">
+
+                <TextView
+                    android:id="@+id/inicio_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+
+                    android:text="@string/txt_dont_user"
+                    android:textSize="13sp"
+                    android:background="@color/blanco_clear20"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/inicio_bonton_sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="crearUsuario"
+                    android:text="@string/bt_sign_in"
+                    tools:ignore="OnClick" />
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/inicio_boton_recuperar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="recuperarPassword"
+                    android:layout_gravity="center"
+
+                    android:text="Olvidé mi contraseña"/>
+
+                <Button
+                    android:id="@+id/inicio_boton_log_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="iniciarSesion"
+                    android:layout_gravity="center"
+
+                    android:text="@string/bt_log_in"/>
+
+                <TextView
+                    android:id="@+id/testado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
