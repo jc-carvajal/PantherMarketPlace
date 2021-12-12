@@ -88,7 +88,7 @@
     <string name="msg_codigo_generado_mail">Si el usuario ingresado existe, se enviará el código de recuperación al correo electronico de la cuenta</string>
 
     <string name="mail_recovery1">Se ha solicitado un código de recuperación, su código es: "</string>
-    <string name="mail_recovery2"> Siempre use el código de recuperación mas reciente</string>
+    <string name="mail_recovery2">" Siempre use el código de recuperación mas reciente</string>
 
     <string name="msg_error_rec_code">Código Erroneo</string>
     <string name="txt_rec_code">Código de recuperación</string>
@@ -137,7 +137,7 @@
     <string name="Disponible_Juan_29">En Español</string>
     <string name="Disponible_Juan_30">En Español</string>
 
-    <string name="Disponible_Pedro_01">En Español</string>
+    <string name="fill_user">Debe ingresar un usuario</string>
     <string name="Disponible_Pedro_02">En Español</string>
     <string name="Disponible_Pedro_03">En Español</string>
     <string name="Disponible_Pedro_04">En Español</string>

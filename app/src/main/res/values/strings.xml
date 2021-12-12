@@ -88,7 +88,7 @@
     <string name="msg_codigo_generado_mail">If the user entered exists, the recovery code will be sent to the registered email</string>
 
     <string name="mail_recovery1">A recovery code has been requested, the code is: "</string>
-    <string name="mail_recovery2">Always use the most recent recovery code</string>
+    <string name="mail_recovery2">" Always use the most recent recovery code</string>
 
     <string name="msg_error_rec_code">Wrong code</string>
     <string name="txt_rec_code">Recovery code</string>
@@ -137,7 +137,7 @@
     <string name="Disponible_Juan_29">In English</string>
     <string name="Disponible_Juan_30">In English</string>
 
-    <string name="Disponible_Pedro_01">In English</string>
+    <string name="fill_user">You must enter a user</string>
     <string name="Disponible_Pedro_02">In English</string>
     <string name="Disponible_Pedro_03">In English</string>
     <string name="Disponible_Pedro_04">In English</string>

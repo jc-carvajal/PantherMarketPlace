@@ -96,7 +96,20 @@ public class Recuperar extends AppCompatActivity {
         CODE=SA+SB+SC+SD+SE;
         //T1.setText(CODE);
 
-        USU=guardarRecovery(CODE);
+        if(USER.getText().toString().equals(""))
+        {
+            Toast toastcompletar=Toast.makeText(this,"",Toast.LENGTH_LONG);
+            toastcompletar.setText(R.string.fill_user);
+            toastcompletar.setGravity(CENTER,0,0);
+            toastcompletar.show();
+        }
+        else
+        {
+            USU=guardarRecovery(CODE);
+        }
+
+
+
 
         //enviarCorreo(CODE,USU);
 
