@@ -138,11 +138,11 @@
     <string name="Disponible_Juan_30">In English</string>
 
     <string name="fill_user">You must enter a user</string>
-    <string name="Disponible_Pedro_02">In English</string>
-    <string name="Disponible_Pedro_03">In English</string>
-    <string name="Disponible_Pedro_04">In English</string>
-    <string name="Disponible_Pedro_05">In English</string>
-    <string name="Disponible_Pedro_06">In English</string>
+    <string name="welcome">WELCOME</string>
+    <string name="news">NEWS</string>
+    <string name="hellow">HELLO WORLD!</string>
+    <string name="update1">Official launch. Application version 1.0.</string>
+    <string name="update2">There are products available!</string>
     <string name="Disponible_Pedro_07">In English</string>
     <string name="Disponible_Pedro_08">In English</string>
     <string name="Disponible_Pedro_09">In English</string>
