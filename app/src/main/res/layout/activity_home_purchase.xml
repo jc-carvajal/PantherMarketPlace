@@ -26,17 +26,32 @@
         android:layout_marginHorizontal="10dp"
         android:background="@color/teal_700"/>
 
+    <TextView
+        android:id="@+id/txtvCountProducts"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:background="#F44336"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclervList"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintVertical_bias="0.5" />
+
     <Button
-        android:id="@+id/btnPurchase"
+        android:id="@+id/btnShoppingCar"
+        android:text="@string/btn_Shopping_Car"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="LaunchProductDetailsActivity"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
-        app:layout_constraintVertical_bias="0.971" />
+        app:layout_constraintStart_toEndOf="@+id/txtvCountProducts"
+        app:layout_constraintTop_toBottomOf="@+id/recyclervList"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

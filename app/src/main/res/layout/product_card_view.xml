@@ -33,6 +33,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+            <CheckBox
+                android:id="@+id/cbShoppingCar"
+                android:text="@string/add_Shopping_Car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <ImageView
