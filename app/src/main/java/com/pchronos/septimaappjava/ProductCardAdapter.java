@@ -1,5 +1,9 @@
 package com.pchronos.septimaappjava;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +39,6 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
 
     List<VGProduct> Products;
     String ImageURL="";
-    //private ClickListener xxx;
 
     public ProductCardAdapter(List<VGProduct> products)
     {
@@ -70,6 +73,37 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
             Glide.with(holder.itemView).load(ImageURL).into(holder.ProductImage);
         }
 
+        holder.ProductCardVIew.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                int i = holder.getAdapterPosition();
+                Intent IntentProductDetails = new Intent(v.getContext(), ProductDetailsActivity.class);
+
+                IntentProductDetails.putExtra("ProductId", Products.get(i).IdProduct);
+                IntentProductDetails.putExtra("CategoryId", Products.get(i).CategoryId);
+                IntentProductDetails.putExtra("Year", Products.get(i).Year);
+                IntentProductDetails.putExtra("Price", Products.get(i).Price);
+                IntentProductDetails.putExtra("Inventary", Products.get(i).Inventary);
+                IntentProductDetails.putExtra("Product", Products.get(i).Product);
+                IntentProductDetails.putExtra("Description", Products.get(i).Description);
+                IntentProductDetails.putExtra("ImageCode", Products.get(i).ImageCode);
+
+                startActivity(v.getContext(), IntentProductDetails, Bundle.EMPTY);
+            }
+        });
+        /*
+        holder.ProductImage.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent IntentProductDetails = new Intent(v.getContext(), ProductDetailsActivity.class);
+                startActivity(v.getContext(), IntentProductDetails, Bundle.EMPTY);
+            }
+        });
+        */
     }
 
     @Override
@@ -78,10 +112,5 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
         // return 0;
         return Products.size();
     }
-    /*
-    public class ClickListener(int position, View view)
-    {
 
-    }
-    */
 }

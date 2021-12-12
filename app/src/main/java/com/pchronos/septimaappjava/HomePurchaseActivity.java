@@ -1,6 +1,5 @@
 package com.pchronos.septimaappjava;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -43,8 +42,8 @@ public class HomePurchaseActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_purchase);
 
-        DB_PANTHER=FirebaseFirestore.getInstance();
-        BtnPurchase=(Button)findViewById(R.id.btnPurchase);
+        DB_PANTHER = FirebaseFirestore.getInstance();
+        BtnPurchase = (Button) findViewById(R.id.btnPurchase);
 
         SpinCategories = (Spinner) findViewById(R.id.spin_categories);
         REFRESH_CATEGORIES_LIST(SpinCategories);
@@ -171,7 +170,9 @@ public class HomePurchaseActivity extends AppCompatActivity
 
     public void LaunchProductDetailsActivity(View view)
     {
-        Intent IntentProductDetails = new Intent(this, ProductDetailsActivity.class);
-        startActivity(IntentProductDetails);
+        //Intent IntentProductDetails = new Intent(this, ProductDetailsActivity.class);
+        //IntentProductDetails.putExtra("Product", Products.get(SelectedProductPosition).Product);
+        //startActivity(IntentProductDetails);
     }
+
 }

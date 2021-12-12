@@ -1,32 +1,25 @@
 package com.pchronos.septimaappjava;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import com.bumptech.glide.Glide;
 
 public class ProductDetailsActivity extends AppCompatActivity
 {
-    FirebaseFirestore DB_PANTHER;
-    Map<String, Object> DOCTOLOAD;
-    Spinner SpinStates;
-    ListView Lstv1;
+    //FirebaseFirestore DB_PANTHER;
+    String ImageURL;
+    ImageView ProductImage;
+    TextView IdProduct;
+    TextView CategoryId;
+    TextView Year;
+    TextView Price;
+    TextView Inventary;
+    TextView Product;
+    TextView Description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -34,75 +27,34 @@ public class ProductDetailsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
 
-        DB_PANTHER = FirebaseFirestore.getInstance();
-        Lstv1 = (ListView) findViewById(R.id.lstv1);
+        //DB_PANTHER = FirebaseFirestore.getInstance();
+        ProductImage = (ImageView) findViewById(R.id.img1);
+        Product = (TextView) findViewById(R.id.txtv1);
+        Year = (TextView) findViewById(R.id.txtv2);
+        Price = (TextView) findViewById(R.id.txtv3);
+        Description = (TextView) findViewById(R.id.txtv4);
+        IdProduct = (TextView) findViewById(R.id.txtv5);
+        CategoryId = (TextView) findViewById(R.id.txtv6);
+        Inventary = (TextView) findViewById(R.id.txtv7);
 
-        SpinStates =(Spinner) findViewById(R.id.spin_states);
-        REFRESH_STATES_SPIN(SpinStates);
-        SpinStates.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        Bundle data = getIntent().getExtras();
+        ImageURL = data.getString("ImageCode");
+        IdProduct.setText("" + data.get("ProductId"));
+        CategoryId.setText("" + data.get("CategoryId"));
+        Year.setText("" + data.get("Year"));
+        Price.setText("" + data.get("Price"));
+        Inventary.setText("" + data.get("Inventary"));
+        Product.setText("" + data.getString("Product"));
+        Description.setText("" + data.getString("Description"));
+
+        if (ImageURL.isEmpty())
         {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
-                REFRESH_TOWNS_LIST(view);
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent){}
-        });
-    }
-
-    private void REFRESH_STATES_SPIN(View view)
-    {
-        List<String> ARRAYTOLIST = new ArrayList<String>();
-        DB_PANTHER.collection("STATES").orderBy("STATE").get()
-            .addOnFailureListener(new OnFailureListener()
-            {
-                @Override
-                public void onFailure(@NonNull Exception e)
-                {
-
-                }
-            })
-            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>()
-            {
-                @Override
-                public void onSuccess(QuerySnapshot queryDocuments)
-                {
-                    for (QueryDocumentSnapshot DOC : queryDocuments)
-                    {
-                        ARRAYTOLIST.add("" + DOC.get("STATE"));
-                    }
-                    String DATATOLIST[] = ARRAYTOLIST.toArray(new String[ARRAYTOLIST.size()]);
-                    ArrayAdapter<String> ADAPTER = new ArrayAdapter<String>(view.getContext(),
-                            android.R.layout.simple_spinner_item, DATATOLIST);
-                    ADAPTER.setDropDownViewResource(android.R.layout.simple_spinner_item);
-                    SpinStates.setAdapter(ADAPTER);
-                }
-            });
-    }
-
-    public void REFRESH_TOWNS_LIST(View view)
-    {
-        List<String> ARRAYTOLIST = new ArrayList<String>();
-        DB_PANTHER.collection("TOWNS")
-            .whereEqualTo("STATE", SpinStates.getSelectedItem().toString()).get()
-            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>()
-            {
-                @Override
-                public void onSuccess(QuerySnapshot queryDocuments)
-                {
-                    for (QueryDocumentSnapshot DOC : queryDocuments)
-                    {
-                        //ARRAYTOLIST.add(DOC.get("IDTOWN") + ": " + DOC.get("TOWN") + " - " + DOC.get("STATE"));
-                        ARRAYTOLIST.add(DOC.get("IDTOWN") + ": " +  DOC.get("TOWN"));
-                    }
-                    String DATATOLIST[] = ARRAYTOLIST.toArray(new String[ARRAYTOLIST.size()]);
-                    ArrayAdapter<String> ADAPTER = new ArrayAdapter<String>(view.getContext(),
-                            android.R.layout.simple_list_item_1, DATATOLIST);
-                    Lstv1.setAdapter(ADAPTER);
-                    Toast.makeText(view.getContext(), ARRAYTOLIST.size() + " Towns", Toast.LENGTH_LONG).show();
-                }
-            });
+            ProductImage.setImageResource(R.drawable.ic_launcher_background);
+        }
+        else
+        {
+            Glide.with(this).load(ImageURL).into(ProductImage);
+        }
     }
 
 }
