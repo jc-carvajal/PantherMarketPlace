@@ -41,8 +41,8 @@ public class ProductDetailsActivity extends AppCompatActivity
         ImageURL = data.getString("ImageCode");
         IdProduct.setText("" + data.get("ProductId"));
         CategoryId.setText("" + data.get("CategoryId"));
-        Year.setText("Año: " + data.get("Year"));
-        Price.setText("Precio: $" + data.get("Price"));
+        Year.setText(getString(R.string.txt_year) + data.get("Year"));
+        Price.setText(getString(R.string.txt_price) + data.get("Price"));
         Inventary.setText("" + data.get("Inventary"));
         Product.setText("" + data.getString("Product"));
         Description.setText("" + data.getString("Description"));

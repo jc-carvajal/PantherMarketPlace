@@ -27,13 +27,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="350dp"
         android:layout_marginHorizontal="10dp"
         android:background="@color/teal_700"/>
 
     <TextView
         android:id="@+id/txtvLabelDelivery"
-        android:text="Datos de entrega del pedido"
+        android:text="@string/txt_delivery_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -46,7 +46,7 @@
 
     <TextView
         android:id="@+id/txtvStateLabel"
-        android:text="Departamento:"
+        android:text="@string/txt_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -62,7 +62,7 @@
         android:popupBackground="@color/teal_200"
         style="@android:style/Widget.Holo.Light.Spinner"
         android:layout_width="276dp"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,31 +73,32 @@
 
     <TextView
         android:id="@+id/txtvTownLabel"
-        android:text="Ciudad:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:text="@string/txt_town"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtvStateLabel"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.241" />
 
     <Spinner
         android:id="@+id/spinTowns"
-        android:popupBackground="@color/teal_200"
         style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="300dp"
-        android:layout_height="25dp"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:popupBackground="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
         app:layout_constraintStart_toEndOf="@+id/txtvTownLabel"
         app:layout_constraintTop_toBottomOf="@+id/txtvStateLabel"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.21" />
 
+    <!--
     <TextView
         android:id="@+id/txtvAdressLabel"
         android:layout_width="wrap_content"
@@ -105,33 +106,35 @@
         android:text="Dirección:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtvTownLabel"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintVertical_bias="0.43" />
 
     <EditText
         android:id="@+id/etxtDeliveryAddress"
-        android:hint="Direccion de entrega"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="Direccion de entrega"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
         app:layout_constraintStart_toEndOf="@+id/txtvAdressLabel"
         app:layout_constraintTop_toBottomOf="@+id/spinTowns"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintVertical_bias="0.335" />
+    -->
 
     <Button
         android:id="@+id/btnBuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PROCESAR PEDIDO"
+        android:layout_marginBottom="40dp"
+        android:text="@string/btn_process_order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toEndOf="@+id/txtvCountProducts2"
-        app:layout_constraintTop_toBottomOf="@+id/etxtDeliveryAddress"
+        app:layout_constraintTop_toBottomOf="@+id/spinTowns"
         app:layout_constraintVertical_bias="0.538" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

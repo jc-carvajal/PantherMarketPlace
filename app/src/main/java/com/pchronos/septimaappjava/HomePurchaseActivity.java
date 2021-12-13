@@ -133,8 +133,13 @@ public class HomePurchaseActivity extends AppCompatActivity
                                 i,false));
                         i++;
                     }
-                    Toast.makeText(getApplicationContext(),
-                            ProductsList.size() + " Products",Toast.LENGTH_SHORT).show();
+                    /*
+                    Toast toast=Toast.makeText(getApplicationContext(),"",Toast.LENGTH_SHORT);
+                    toast.setText(ProductsList.size() + " Products");
+                    toast.setGravity(TOP,0,0);
+                    toast.show();
+                    */
+                    Toast.makeText(getApplicationContext(),ProductsList.size() + " Products",Toast.LENGTH_SHORT).show();
                 }
             });
         FilteredProductsList = ProductsList;
