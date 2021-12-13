@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fm1_0_land"
+    tools:context=".FormularioRegistro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        android:layout_margin="1dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/titulo_img_t" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="horizontal"
+        android:layout_margin="1dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/titulo_img_t" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/check_registro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_registro"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@color/blanco_clear20"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <Button
+                    android:id="@+id/b1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="metodopolitica2"
+                    android:text="@string/bt_policies"/>
+
+                <Button
+                    android:id="@+id/b2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="crearUsuario"
+                    android:text="@string/bt_sign_in"/>
+
+                <LinearLayout
+                    android:id="@+id/contenedor"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal">
+
+                    <fragment
+                        android:id="@+id/fragment"
+                        android:name="com.pchronos.septimaappjava.Fragmento1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/reg_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+
+                android:background="@color/blanco_clear10"
+                android:hint="@string/txt_user"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/reg_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/blanco_clear10"
+                android:hint="@string/txt_password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/reg_pass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/blanco_clear10"
+                android:hint="@string/txt_password_confirm"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+
+
+
+            <EditText
+                android:id="@+id/reg_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/blanco_clear10"
+                android:hint="@string/txt_name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/reg_apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/blanco_clear10"
+                android:hint="@string/txt_last_name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/reg_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/blanco_clear10"
+                android:hint="@string/txt_phone"
+                android:inputType="phone"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/reg_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/blanco_clear10"
+                android:hint="@string/txt_email"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

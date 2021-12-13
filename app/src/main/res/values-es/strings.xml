@@ -138,11 +138,11 @@
     <string name="Disponible_Juan_30">En Español</string>
 
     <string name="fill_user">Debe ingresar un usuario</string>
-    <string name="Disponible_Pedro_02">En Español</string>
-    <string name="Disponible_Pedro_03">En Español</string>
-    <string name="Disponible_Pedro_04">En Español</string>
-    <string name="Disponible_Pedro_05">En Español</string>
-    <string name="Disponible_Pedro_06">En Español</string>
+    <string name="welcome">BIENVENIDO</string>
+    <string name="news">NOTICIAS</string>
+    <string name="hellow">HOLA MUNDO!</string>
+    <string name="update1">Lanzamiento oficial. Version de aplicacion 1.0.</string>
+    <string name="update2">Hay productos disponibles!</string>
     <string name="Disponible_Pedro_07">En Español</string>
     <string name="Disponible_Pedro_08">En Español</string>
     <string name="Disponible_Pedro_09">En Español</string>

@@ -242,6 +242,7 @@ public class FormularioRegistro extends AppCompatActivity {
 
                                                             DB_FIRE.collection("USERS").document(usuario).set(DATOSALMACENAR);
                                                             //DB_FIRE.collection("USERS").document(usuario).update(DATOSALMACENAR);
+                                                            lanzarAlertR();
 
 
                                                         }catch (Exception e)
@@ -254,7 +255,9 @@ public class FormularioRegistro extends AppCompatActivity {
 
                                                         }
 
+                                                        /*
                                                         //=======confirmar que se guardaron los datos
+
                                                         try {
                                                             DB_USUARIO_CONFIRM=(documentSnapshot.get("USER").toString());
                                                         }catch (Exception e)
@@ -272,30 +275,19 @@ public class FormularioRegistro extends AppCompatActivity {
 
                                                             lanzarAlertR();
 
-                                                           /* AlertDialog.Builder ALERTA=new AlertDialog.Builder(getBaseContext());
-                                                            ALERTA.setTitle(R.string.msg_registro_exitoso);
-                                                            ALERTA.setMessage(R.string.msg_registro_a_login);
-                                                            ALERTA.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                                                                @Override
-                                                                public void onClick(DialogInterface dialog, int which) {
-                                                                    Intent SA=new Intent(view.getContext(),Login.class);
-                                                                    startActivity(SA);
-                                                                }
-                                                            });
-
-                                                            ALERTA.create().show(); */
 
 
-
-                                                        }
+                                                    }
                                                         else
-                                                        {
-                                                            Toast toastregistroerror=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
-                                                            toastregistroerror.setText(R.string.msg_registro_error_guardar);
-                                                            toastregistroerror.setGravity(CENTER,0,0);
-                                                            toastregistroerror.show();
-                                                        }
-                                                        //=======confirmar que se guardaron los datos fin
+                                                    {
+                                                        Toast toastregistroerror=Toast.makeText(getBaseContext(),"",Toast.LENGTH_LONG);
+                                                        toastregistroerror.setText(R.string.msg_registro_error_guardar);
+                                                        toastregistroerror.setGravity(CENTER,0,0);
+                                                        toastregistroerror.show();
+                                                    }
+                                                    //=======confirmar que se guardaron los datos fin
+                                                         */
+
 
                                                     }
 

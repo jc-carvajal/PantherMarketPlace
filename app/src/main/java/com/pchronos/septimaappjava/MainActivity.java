@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        T1=(TextView) findViewById(R.id.t1home);
+        //T1=(TextView) findViewById(R.id.t1home);
         DrawerLayout drawer=(DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawer,toolbar,R.string.apertura,R.string.cierre);
         toggle.syncState();
@@ -103,18 +103,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId())
         {
             case R.id.op1nav:
-                T1.setText("Escogió opcion 1 crear usuario");
+                //T1.setText("Escogió opcion 1 crear usuario");
                 //lanza la activity del formulario
                 Intent AFR=new Intent(this,Configuracion.class);
                 startActivity(AFR);
                 break;
             case R.id.op2nav:
-                T1.setText("Comprar");
+                //T1.setText("Comprar");
                 Intent CH=new Intent(this, HomePurchaseActivity.class);
                 startActivity(CH);
                 break;
             case R.id.op5nav:
-                T1.setText("Cerrar sesion");
+                //T1.setText("Cerrar sesion");
                 AlertDialog.Builder ALERTA=new AlertDialog.Builder(this);
                 ALERTA.setTitle(R.string.menu_cerrar_sesion);
                 ALERTA.setMessage(R.string.msg_confirmar_cerrar_sesion);
