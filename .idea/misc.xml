@@ -6,11 +6,12 @@
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_compras_home2.xml" value="0.209375" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_configuracion.xml" value="0.18958333333333333" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_home_purchase.xml" value="0.21965579710144928" />
+        <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_login.xml" value="0.1933876811594203" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_product_details.xml" value="0.19882246376811594" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_purchase_home.xml" value="0.209375" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_shopping_car.xml" value="0.34270833333333334" />
-        <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_shopping_cart.xml" value="0.2033514492753623" />
+        <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/activity_shopping_cart.xml" value="0.33" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/app_bar.xml" value="0.19293478260869565" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/fragment_fragmento1.xml" value="0.21875" />
         <entry key="..\:/Apps/AndroidStudioProjects/PantherMarketPlace/app/src/main/res/layout/fragment_fragmento2.xml" value="0.21875" />
@@ -35,7 +36,6 @@
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout-land/activity_login.xml" value="0.25" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout-land/activity_recuperar.xml" value="0.22" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout-land/content_main.xml" value="0.22" />
-        <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout/activity_about.xml" value="0.33" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout/activity_configuracion.xml" value="0.25" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout/activity_formulario_registro.xml" value="0.33" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout/activity_home_purchase.xml" value="0.20416666666666666" />
@@ -50,7 +50,7 @@
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout/fragment_fragmento2.xml" value="0.20416666666666666" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout/nav_header.xml" value="0.22" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/layout/product_card_view.xml" value="0.20416666666666666" />
-        <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/menu/nav_menu.xml" value="0.25" />
+        <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/PantherMarketplace/app/src/main/res/menu/nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/SeptimaAppJava/app/src/main/res/layout/activity_form_registro.xml" value="0.20416666666666666" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/SeptimaAppJava/app/src/main/res/layout/activity_formulario_registro.xml" value="0.20416666666666666" />
         <entry key="..\:/Mintic 2022/Ciclo 4/Desarrollo de Aplicaciones Moviles/SeptimaAppJava/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />

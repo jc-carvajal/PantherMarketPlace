@@ -108,12 +108,12 @@
 
     <string name="add_Shopping_Cart">Añadir al Carrito de Compras</string>
     <string name="btn_Shopping_Cart">Ver Carrito de Compras</string>
-    <string name="Disponible_Juan_03">En Español</string>
-    <string name="Disponible_Juan_04">En Español</string>
-    <string name="Disponible_Juan_05">En Español</string>
-    <string name="Disponible_Juan_06">En Español</string>
-    <string name="Disponible_Juan_07">En Español</string>
-    <string name="Disponible_Juan_08">En Español</string>
+    <string name="txt_year">Año: "</string>
+    <string name="txt_price">Precio:  $ "</string>
+    <string name="txt_delivery_data">Datos de entrega del pedido</string>
+    <string name="txt_state">Departamento</string>
+    <string name="txt_town">Ciudad</string>
+    <string name="btn_process_order">PROCESAR PEDIDO</string>
     <string name="Disponible_Juan_09">En Español</string>
     <string name="Disponible_Juan_10">En Español</string>
     <string name="Disponible_Juan_11">En Español</string>

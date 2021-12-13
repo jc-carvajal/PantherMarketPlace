@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,7 +36,7 @@ public class ShoppingCartActivity extends AppCompatActivity
     TextView TxtvCountProducts;
     RecyclerView RV_ProductsList;
     Spinner SpinStates, SpinTowns;
-    EditText DeliveryAdress;
+    //EditText DeliveryAddress;
     Button BtnBuy;
 
     @Override
@@ -45,7 +44,7 @@ public class ShoppingCartActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
-        //getSupportActionBar().hide();
+        getSupportActionBar().hide();
 
         ShoppingCartList = new ArrayList<>();
         //   ------- AQUÍ SE DESENCADENA UN ERROR -------
@@ -62,7 +61,7 @@ public class ShoppingCartActivity extends AppCompatActivity
         RV_ProductsList.setAdapter(Adapter);
 
         TxtvCountProducts = (TextView) findViewById(R.id.txtvCountProducts2);
-        DeliveryAdress = (EditText) findViewById(R.id.etxtDeliveryAddress);
+        //DeliveryAddress = (EditText) findViewById(R.id.etxtDeliveryAddress);
 
         SpinStates = (Spinner) findViewById(R.id.spinStates);
         REFRESH_STATES_SPIN(SpinStates);
