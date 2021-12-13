@@ -59,6 +59,8 @@
 
     <Spinner
         android:id="@+id/spinStates"
+        android:popupBackground="@color/teal_200"
+        style="@android:style/Widget.Holo.Light.Spinner"
         android:layout_width="276dp"
         android:layout_height="25dp"
         android:layout_marginTop="5dp"
@@ -84,6 +86,8 @@
 
     <Spinner
         android:id="@+id/spinTowns"
+        android:popupBackground="@color/teal_200"
+        style="@android:style/Widget.Holo.Light.Spinner"
         android:layout_width="300dp"
         android:layout_height="25dp"
         android:layout_marginTop="5dp"
