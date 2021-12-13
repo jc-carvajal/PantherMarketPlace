@@ -13,7 +13,8 @@
         android:theme="@style/Theme.SeptimaAppJava" >
         <activity
             android:name=".AboutActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ShoppingCartActivity"
             android:exported="false" />
