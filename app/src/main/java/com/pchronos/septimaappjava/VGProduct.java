@@ -12,7 +12,7 @@ public class VGProduct
     private String ImageCode;
     private String Category;
     private int Position;
-    private boolean InShoppingCar;
+    private boolean InShoppingCart;
 
     public VGProduct()
     {
@@ -21,7 +21,7 @@ public class VGProduct
 
     public VGProduct(int idProduct, int categoryId, int year, int price, int inventary,
                      String product, String description, String imageCode,
-                     String category, int position, boolean inShoppingCar)
+                     String category, int position, boolean inShoppingCart)
     {
         IdProduct = idProduct;
         CategoryId = categoryId;
@@ -33,7 +33,7 @@ public class VGProduct
         ImageCode = imageCode;
         Category = category;
         Position = position;
-        InShoppingCar = inShoppingCar;
+        InShoppingCart = inShoppingCart;
     }
 
     public int getIdProduct() { return IdProduct; }
@@ -76,8 +76,8 @@ public class VGProduct
 
     public void setPosition(int position) { Position = position; }
 
-    public boolean isInShoppingCar() { return InShoppingCar; }
+    public boolean isInShoppingCart() { return InShoppingCart; }
 
-    public void setInShoppingCar(boolean inShoppingCar) { InShoppingCar = inShoppingCar; }
+    public void setInShoppingCart(boolean inShoppingCart) { InShoppingCart = inShoppingCart; }
 
 }

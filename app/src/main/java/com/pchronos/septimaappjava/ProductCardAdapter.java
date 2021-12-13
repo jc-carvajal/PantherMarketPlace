@@ -12,7 +12,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -25,21 +24,21 @@ import java.util.List;
 public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.ProductViewHolder>
 {
     TextView TxtvCountProducts;
-    Button BtnShoppingCar;
+    Button BtnShoppingCart;
     List<VGProduct> ProductsList;
     List<VGProduct> FilteredProductsList;
-    List<VGProduct> ShoppingCarList;
+    List<VGProduct> ShoppingCartList;
     String ImageURL="";
 
-    public ProductCardAdapter(TextView txtvCountProducts, Button btnShoppingCar,
+    public ProductCardAdapter(TextView txtvCountProducts, Button btnShoppingCart,
                               List<VGProduct> productsList, List<VGProduct> filteredProductsList,
-                              List<VGProduct> shoppingCarList)
+                              List<VGProduct> shoppingCartList)
     {
         TxtvCountProducts = txtvCountProducts;
-        BtnShoppingCar = btnShoppingCar;
+        BtnShoppingCart = btnShoppingCart;
         ProductsList = productsList;
         FilteredProductsList = filteredProductsList;
-        ShoppingCarList = shoppingCarList;
+        ShoppingCartList = shoppingCartList;
     }
 
     @NonNull
@@ -57,7 +56,7 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
     {
         holder.ProductName.setText(FilteredProductsList.get(position).getProduct());
         holder.ProductDescription.setText(FilteredProductsList.get(position).getDescription());
-        holder.InShoppingCar.setChecked(FilteredProductsList.get(position).isInShoppingCar());
+        holder.InShoppingCart.setChecked(FilteredProductsList.get(position).isInShoppingCart());
 
         //holder.ProductImage.setImageResource(R.drawable.ic_launcher_background);
         //holder.ProductImage.setImageResource(FilteredProductsList.get(position).getImageCode);
@@ -71,25 +70,25 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
             Glide.with(holder.itemView).load(ImageURL).into(holder.ProductImage);
         }
 
-        holder.InShoppingCar.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        holder.InShoppingCart.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
                 int i = holder.getAdapterPosition();
                 int j = FilteredProductsList.get(i).getPosition();
-                boolean Added = ProductsList.get(j).isInShoppingCar();
-                if (!Added && holder.InShoppingCar.isChecked())
+                boolean Added = ProductsList.get(j).isInShoppingCart();
+                if (!Added && holder.InShoppingCart.isChecked())
                 {
-                    ProductsList.get(j).setInShoppingCar(true);
-                    ShoppingCarList.add(ProductsList.get(j));
+                    ProductsList.get(j).setInShoppingCart(true);
+                    ShoppingCartList.add(ProductsList.get(j));
                 }
-                else if (Added && !holder.InShoppingCar.isChecked())
+                else if (Added && !holder.InShoppingCart.isChecked())
                 {
-                    ProductsList.get(j).setInShoppingCar(false);
-                    ShoppingCarList.remove(ProductsList.get(j));
+                    ProductsList.get(j).setInShoppingCart(false);
+                    ShoppingCartList.remove(ProductsList.get(j));
                 }
-                TxtvCountProducts.setText(""+ShoppingCarList.size());
+                TxtvCountProducts.setText(""+ShoppingCartList.size());
             }
         });
 
@@ -125,13 +124,15 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
         });
         */
 
-        BtnShoppingCar.setOnClickListener(new View.OnClickListener()
+        BtnShoppingCart.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                // Launch ShoppingCardActivity
-                Toast.makeText(v.getContext(), "View Shopping Car", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(v.getContext(), "View Shopping Cart", Toast.LENGTH_SHORT).show();
+                Intent IntentShoppingCart = new Intent(v.getContext(), ShoppingCartActivity.class);
+                //IntentShoppingCart.putExtra("ImageCode", ProductsList.get(i).getImageCode());
+                startActivity(v.getContext(), IntentShoppingCart, Bundle.EMPTY);
             }
         });
 
@@ -146,7 +147,7 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
         ImageView ProductImage;
         TextView ProductName;
         TextView ProductDescription;
-        CheckBox InShoppingCar;
+        CheckBox InShoppingCart;
 
         public ProductViewHolder(@NonNull View itemView)
         {
@@ -155,7 +156,7 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
             ProductImage = (ImageView) itemView.findViewById(R.id.imgCard);
             ProductName = (TextView) itemView.findViewById(R.id.txtvCard1);
             ProductDescription = (TextView) itemView.findViewById(R.id.txtvCard2);
-            InShoppingCar = (CheckBox) itemView.findViewById(R.id.cbShoppingCar);
+            InShoppingCart = (CheckBox) itemView.findViewById(R.id.cbShoppingCart);
         }
     }
 

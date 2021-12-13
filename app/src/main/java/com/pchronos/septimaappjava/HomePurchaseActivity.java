@@ -34,11 +34,11 @@ public class HomePurchaseActivity extends AppCompatActivity
     Spinner SpinCategories;
     RecyclerView RV_ProductsList;
     TextView TxtvCountProducts;
-    Button BtnShoppingCar;
+    Button BtnShoppingCart;
 
     List<VGProduct> ProductsList;
     List<VGProduct> FilteredProductsList;
-    List<VGProduct> ShoppingCarList;
+    List<VGProduct> ShoppingCartList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -48,7 +48,7 @@ public class HomePurchaseActivity extends AppCompatActivity
 
         DB_PANTHER = FirebaseFirestore.getInstance();
         TxtvCountProducts = (TextView) findViewById(R.id.txtvCountProducts);
-        BtnShoppingCar = (Button) findViewById(R.id.btnShoppingCar);
+        BtnShoppingCart = (Button) findViewById(R.id.btnShoppingCart);
 
         SpinCategories = (Spinner) findViewById(R.id.spin_categories);
         REFRESH_CATEGORIES_LIST(SpinCategories);
@@ -138,7 +138,7 @@ public class HomePurchaseActivity extends AppCompatActivity
                 }
             });
         FilteredProductsList = ProductsList;
-        ShoppingCarList = new ArrayList<>();
+        ShoppingCartList = new ArrayList<>();
     }
 
     private void RefreshFilteredProductslist()
@@ -189,8 +189,8 @@ public class HomePurchaseActivity extends AppCompatActivity
 
     private void StartProductsAdapter()
     {
-        ProductCardAdapter Adapter = new ProductCardAdapter(TxtvCountProducts, BtnShoppingCar,
-                ProductsList, FilteredProductsList, ShoppingCarList);
+        ProductCardAdapter Adapter = new ProductCardAdapter(TxtvCountProducts, BtnShoppingCart,
+                ProductsList, FilteredProductsList, ShoppingCartList);
         RV_ProductsList.setAdapter(Adapter);
     }
 
