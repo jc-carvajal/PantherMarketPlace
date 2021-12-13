@@ -2,15 +2,14 @@ package com.pchronos.septimaappjava;
 
 import static androidx.core.content.ContextCompat.startActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -22,18 +21,13 @@ import java.util.List;
 
 public class ShoppingCardAdapter extends RecyclerView.Adapter<ShoppingCardAdapter.ProductViewHolder>
 {
-    TextView TxtvCountProducts;
-    Button BtnBuy;
-    //List<VGProduct> ProductsList;
-    //List<VGProduct> FilteredProductsList;
+    Context context4;
     List<VGProduct> ShoppingCartList;
     String ImageURL="";
 
-    public ShoppingCardAdapter(TextView txtvCountProducts, Button btnBuy,
-                               List<VGProduct> shoppingCartList)
+    public ShoppingCardAdapter(Context context4 , List<VGProduct> shoppingCartList)
     {
-        TxtvCountProducts = txtvCountProducts;
-        BtnBuy = btnBuy;
+        this.context4 = context4;
         ShoppingCartList = shoppingCartList;
     }
 
@@ -98,18 +92,6 @@ public class ShoppingCardAdapter extends RecyclerView.Adapter<ShoppingCardAdapte
         });
         */
 
-        BtnBuy.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Toast.makeText(v.getContext(), "Process Order", Toast.LENGTH_SHORT).show();
-                // Intent IntentShoppingCart = new Intent(v.getContext(), ShoppingCartActivity.class);
-                // IntentShoppingCart.putExtra("ImageCode", ProductsList.get(i).getImageCode());
-                // startActivity(v.getContext(), IntentShoppingCart, Bundle.EMPTY);
-            }
-        });
-
     }
 
     @Override
@@ -126,11 +108,11 @@ public class ShoppingCardAdapter extends RecyclerView.Adapter<ShoppingCardAdapte
         public ProductViewHolder(@NonNull View itemView)
         {
             super(itemView);
-            ProductCardVIew = (CardView) itemView.findViewById(R.id.product_card);
-            ProductImage = (ImageView) itemView.findViewById(R.id.imgCard);
-            ProductName = (TextView) itemView.findViewById(R.id.txtvCard1);
-            ProductDescription = (TextView) itemView.findViewById(R.id.txtvCard2);
-            ProductPrice = (TextView) itemView.findViewById(R.id.txtvCard3);
+            ProductCardVIew = (CardView) itemView.findViewById(R.id.product_card2);
+            ProductImage = (ImageView) itemView.findViewById(R.id.imgCard2);
+            ProductName = (TextView) itemView.findViewById(R.id.txtvCard4);
+            ProductDescription = (TextView) itemView.findViewById(R.id.txtvCard5);
+            ProductPrice = (TextView) itemView.findViewById(R.id.txtvCard6);
         }
     }
 
