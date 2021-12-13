@@ -12,4 +12,6 @@
     <color name="azul_700">#010310</color>
     <color name="blanco_clear20">#CCFFFFFF</color>
     <color name="blanco_clear10">#E6FFFFFF</color>
+
+    <color name="red_700">#D32F2F</color>
 </resources>

@@ -107,8 +107,8 @@
 
     <string name="add_Shopping_Cart">Add to Shopping Cart</string>
     <string name="btn_Shopping_Cart">View Shopping Cart</string>
-    <string name="Disponible_Juan_03">In English</string>
-    <string name="Disponible_Juan_04">In English</string>
+    <string name="txt_year">Year:  "</string>
+    <string name="txt_price">Price:  $ "</string>
     <string name="Disponible_Juan_05">In English</string>
     <string name="Disponible_Juan_06">In English</string>
     <string name="Disponible_Juan_07">In English</string>
