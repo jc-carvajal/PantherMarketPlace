@@ -189,7 +189,8 @@ public class HomePurchaseActivity extends AppCompatActivity
 
     private void StartProductsAdapter()
     {
-        ProductCardAdapter Adapter = new ProductCardAdapter(TxtvCountProducts, BtnShoppingCart,
+        ProductCardAdapter Adapter = new ProductCardAdapter(HomePurchaseActivity.this,
+                TxtvCountProducts, BtnShoppingCart,
                 ProductsList, FilteredProductsList, ShoppingCartList);
         RV_ProductsList.setAdapter(Adapter);
     }

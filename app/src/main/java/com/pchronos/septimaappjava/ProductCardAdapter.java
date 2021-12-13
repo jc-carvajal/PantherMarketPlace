@@ -2,6 +2,7 @@ package com.pchronos.septimaappjava;
 
 import static androidx.core.content.ContextCompat.startActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -23,6 +24,7 @@ import java.util.List;
 
 public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.ProductViewHolder>
 {
+    Context context2;
     TextView TxtvCountProducts;
     Button BtnShoppingCart;
     List<VGProduct> ProductsList;
@@ -30,10 +32,11 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
     List<VGProduct> ShoppingCartList;
     String ImageURL="";
 
-    public ProductCardAdapter(TextView txtvCountProducts, Button btnShoppingCart,
+    public ProductCardAdapter(Context context2, TextView txtvCountProducts, Button btnShoppingCart,
                               List<VGProduct> productsList, List<VGProduct> filteredProductsList,
                               List<VGProduct> shoppingCartList)
     {
+        this.context2 = context2;
         TxtvCountProducts = txtvCountProducts;
         BtnShoppingCart = btnShoppingCart;
         ProductsList = productsList;
@@ -130,9 +133,10 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
             public void onClick(View v)
             {
                 // Toast.makeText(v.getContext(), "View Shopping Cart", Toast.LENGTH_SHORT).show();
-                Intent IntentShoppingCart = new Intent(v.getContext(), ShoppingCartActivity.class);
-                //IntentShoppingCart.putExtra("ImageCode", ProductsList.get(i).getImageCode());
-                startActivity(v.getContext(), IntentShoppingCart, Bundle.EMPTY);
+                Intent IntentShoppingCart = new Intent(context2, ShoppingCartActivity.class);
+                // Problemas para pasar ShoppingCartList a ShoppingCartActivity
+                // IntentShoppingCart.putExtra("ShoppingCart", (Serializable) ShoppingCartList);
+                context2.startActivity(IntentShoppingCart);
             }
         });
 

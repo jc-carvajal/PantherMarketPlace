@@ -4,7 +4,7 @@
     card_view:cardCornerRadius="6dp"
     card_view:cardElevation="3dp"
     card_view:cardUseCompatPadding="true"
-    android:id="@+id/product_card"
+    android:id="@+id/product_card2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -21,7 +21,7 @@
             android:layout_weight="4" >
 
             <TextView
-                android:id="@+id/txtvCard1"
+                android:id="@+id/txtvCard4"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
                 android:textAlignment="center"
@@ -29,12 +29,12 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/txtvCard2"
+                android:id="@+id/txtvCard5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/txtvCard3"
+                android:id="@+id/txtvCard6"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
                 android:textAlignment="center"
@@ -44,7 +44,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <ImageView
-            android:id="@+id/imgCard"
+            android:id="@+id/imgCard2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
