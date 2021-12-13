@@ -8,6 +8,8 @@
 
     <Spinner
         android:id="@+id/spin_categories"
+        android:popupBackground="@color/teal_200"
+        style="@android:style/Widget.Holo.Light.Spinner"
         android:layout_width="match_parent"
         android:layout_height="40sp"
         android:layout_marginHorizontal="16dp"
