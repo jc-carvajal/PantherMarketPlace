@@ -113,6 +113,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent CH=new Intent(this, HomePurchaseActivity.class);
                 startActivity(CH);
                 break;
+
+            case R.id.op4nav:
+                //T1.setText("Comprar");
+                Intent AB=new Intent(this, AboutActivity.class);
+                startActivity(AB);
+                break;
+
             case R.id.op5nav:
                 //T1.setText("Cerrar sesion");
                 AlertDialog.Builder ALERTA=new AlertDialog.Builder(this);

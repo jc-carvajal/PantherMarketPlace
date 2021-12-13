@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo2"
+    tools:context=".AboutActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acerca de nosotros"
+        android:background="@color/azul"
+        android:textColor="@color/blanco"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PantherShop Videogame Store es una app didactica en la que simulamos una tienda de videojuegos con el fin de implementar los conocimientos adquiridos a lo largo del ciclo academico cursado."
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="20dp"
+        android:textColor="@color/black"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Integrantes"
+        android:background="@color/azul"
+        android:textColor="@color/blanco"
+        android:textSize="20dp"
+        android:paddingHorizontal="30dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Juan Carlos Carvajal Tapias\nPedro Alejandro Quenza Vageon\nRobin Benítez Mora\nHenry David Rosero"
+        android:paddingLeft="30dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shopteampanther@Gmail.com"
+        android:paddingLeft="30dp"
+        android:textColor="@color/azul"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desarrollo de aplicaciones moviles\nciclo 4 - Grupo 9\nMision TIC 2022 - Ucaldas"
+        android:paddingVertical="20dp"
+        android:paddingLeft="30dp"
+        android:textColor="@color/azul_700"
+        />
+
+
+  </LinearLayout>
+
+</LinearLayout>

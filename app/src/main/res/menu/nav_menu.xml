@@ -12,6 +12,11 @@
         android:title="@string/menu_comprar"/>
 
     <item
+        android:id="@+id/op4nav"
+        android:icon="@drawable/ic_about"
+        android:title="@string/about"/>
+
+    <item
         android:id="@+id/op5nav"
         android:icon="@drawable/ic_salir"
         android:title="@string/menu_cerrar_sesion"/>
