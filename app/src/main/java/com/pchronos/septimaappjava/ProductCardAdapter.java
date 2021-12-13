@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,29 +23,22 @@ import java.util.List;
 
 public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.ProductViewHolder>
 {
-    public class ProductViewHolder extends RecyclerView.ViewHolder
-    {
-        CardView ProductCardVIew;
-        ImageView ProductImage;
-        TextView ProductName;
-        TextView ProductDescription;
-
-        public ProductViewHolder(@NonNull View itemView)
-        {
-            super(itemView);
-            ProductCardVIew = (CardView) itemView.findViewById(R.id.product_card);
-            ProductImage = (ImageView) itemView.findViewById(R.id.imgCard);
-            ProductName = (TextView) itemView.findViewById(R.id.txtvCard1);
-            ProductDescription = (TextView) itemView.findViewById(R.id.txtvCard2);
-        }
-    }
-
-    List<VGProduct> Products;
+    TextView TxtvCountProducts;
+    Button BtnShoppingCart;
+    List<VGProduct> ProductsList;
+    List<VGProduct> FilteredProductsList;
+    List<VGProduct> ShoppingCartList;
     String ImageURL="";
 
-    public ProductCardAdapter(List<VGProduct> products)
+    public ProductCardAdapter(TextView txtvCountProducts, Button btnShoppingCart,
+                              List<VGProduct> productsList, List<VGProduct> filteredProductsList,
+                              List<VGProduct> shoppingCartList)
     {
-        Products = products;
+        TxtvCountProducts = txtvCountProducts;
+        BtnShoppingCart = btnShoppingCart;
+        ProductsList = productsList;
+        FilteredProductsList = filteredProductsList;
+        ShoppingCartList = shoppingCartList;
     }
 
     @NonNull
@@ -58,12 +54,13 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position)
     {
-        holder.ProductName.setText(Products.get(position).Product);
-        holder.ProductDescription.setText(Products.get(position).Description);
-        //holder.ProductImage.setImageResource(R.drawable.ic_launcher_background);
-        //holder.ProductImage.setImageResource(Products.get(position).ImageCode);
-        ImageURL = Products.get(position).ImageCode;
+        holder.ProductName.setText(FilteredProductsList.get(position).getProduct());
+        holder.ProductDescription.setText(FilteredProductsList.get(position).getDescription());
+        holder.InShoppingCart.setChecked(FilteredProductsList.get(position).isInShoppingCart());
 
+        //holder.ProductImage.setImageResource(R.drawable.ic_launcher_background);
+        //holder.ProductImage.setImageResource(FilteredProductsList.get(position).getImageCode);
+        ImageURL = FilteredProductsList.get(position).getImageCode();
         if (ImageURL.isEmpty())
         {
             holder.ProductImage.setImageResource(R.drawable.ic_launcher_background);
@@ -73,6 +70,28 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
             Glide.with(holder.itemView).load(ImageURL).into(holder.ProductImage);
         }
 
+        holder.InShoppingCart.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                int i = holder.getAdapterPosition();
+                int j = FilteredProductsList.get(i).getPosition();
+                boolean Added = ProductsList.get(j).isInShoppingCart();
+                if (!Added && holder.InShoppingCart.isChecked())
+                {
+                    ProductsList.get(j).setInShoppingCart(true);
+                    ShoppingCartList.add(ProductsList.get(j));
+                }
+                else if (Added && !holder.InShoppingCart.isChecked())
+                {
+                    ProductsList.get(j).setInShoppingCart(false);
+                    ShoppingCartList.remove(ProductsList.get(j));
+                }
+                TxtvCountProducts.setText(""+ShoppingCartList.size());
+            }
+        });
+
         holder.ProductCardVIew.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -81,14 +100,14 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
                 int i = holder.getAdapterPosition();
                 Intent IntentProductDetails = new Intent(v.getContext(), ProductDetailsActivity.class);
 
-                IntentProductDetails.putExtra("ProductId", Products.get(i).IdProduct);
-                IntentProductDetails.putExtra("CategoryId", Products.get(i).CategoryId);
-                IntentProductDetails.putExtra("Year", Products.get(i).Year);
-                IntentProductDetails.putExtra("Price", Products.get(i).Price);
-                IntentProductDetails.putExtra("Inventary", Products.get(i).Inventary);
-                IntentProductDetails.putExtra("Product", Products.get(i).Product);
-                IntentProductDetails.putExtra("Description", Products.get(i).Description);
-                IntentProductDetails.putExtra("ImageCode", Products.get(i).ImageCode);
+                IntentProductDetails.putExtra("ProductId", ProductsList.get(i).getIdProduct());
+                IntentProductDetails.putExtra("CategoryId", ProductsList.get(i).getCategoryId());
+                IntentProductDetails.putExtra("Year", ProductsList.get(i).getYear());
+                IntentProductDetails.putExtra("Price", ProductsList.get(i).getPrice());
+                IntentProductDetails.putExtra("Inventary", ProductsList.get(i).getInventary());
+                IntentProductDetails.putExtra("Product", ProductsList.get(i).getProduct());
+                IntentProductDetails.putExtra("Description", ProductsList.get(i).getDescription());
+                IntentProductDetails.putExtra("ImageCode", ProductsList.get(i).getImageCode());
 
                 startActivity(v.getContext(), IntentProductDetails, Bundle.EMPTY);
             }
@@ -104,13 +123,41 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
             }
         });
         */
+
+        BtnShoppingCart.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // Toast.makeText(v.getContext(), "View Shopping Cart", Toast.LENGTH_SHORT).show();
+                Intent IntentShoppingCart = new Intent(v.getContext(), ShoppingCartActivity.class);
+                //IntentShoppingCart.putExtra("ImageCode", ProductsList.get(i).getImageCode());
+                startActivity(v.getContext(), IntentShoppingCart, Bundle.EMPTY);
+            }
+        });
+
     }
 
     @Override
-    public int getItemCount()
+    public int getItemCount() { return FilteredProductsList.size(); }
+
+    public class ProductViewHolder extends RecyclerView.ViewHolder
     {
-        // return 0;
-        return Products.size();
+        CardView ProductCardVIew;
+        ImageView ProductImage;
+        TextView ProductName;
+        TextView ProductDescription;
+        CheckBox InShoppingCart;
+
+        public ProductViewHolder(@NonNull View itemView)
+        {
+            super(itemView);
+            ProductCardVIew = (CardView) itemView.findViewById(R.id.product_card);
+            ProductImage = (ImageView) itemView.findViewById(R.id.imgCard);
+            ProductName = (TextView) itemView.findViewById(R.id.txtvCard1);
+            ProductDescription = (TextView) itemView.findViewById(R.id.txtvCard2);
+            InShoppingCart = (CheckBox) itemView.findViewById(R.id.cbShoppingCart);
+        }
     }
 
 }
