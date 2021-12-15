@@ -19,13 +19,13 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class ShoppingCardAdapter extends RecyclerView.Adapter<ShoppingCardAdapter.ProductViewHolder>
+public class ShoppingCartAdapter extends RecyclerView.Adapter<ShoppingCartAdapter.ItemsViewHolder>
 {
     Context context4;
     List<VGProduct> ShoppingCartList;
     String ImageURL="";
 
-    public ShoppingCardAdapter(Context context4 , List<VGProduct> shoppingCartList)
+    public ShoppingCartAdapter(Context context4 , List<VGProduct> shoppingCartList)
     {
         this.context4 = context4;
         ShoppingCartList = shoppingCartList;
@@ -33,23 +33,21 @@ public class ShoppingCardAdapter extends RecyclerView.Adapter<ShoppingCardAdapte
 
     @NonNull
     @Override
-    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    public ItemsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.shopping_card_view,
                 parent, false);
-        ProductViewHolder PVH = new ProductViewHolder(view);
-        return PVH;
+        ItemsViewHolder IVH = new ItemsViewHolder(view);
+        return IVH;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProductViewHolder holder, int position)
+    public void onBindViewHolder(@NonNull ItemsViewHolder holder, int position)
     {
         holder.ProductName.setText(ShoppingCartList.get(position).getProduct());
         holder.ProductDescription.setText(ShoppingCartList.get(position).getDescription());
-        holder.ProductPrice.setText(ShoppingCartList.get(position).getPrice());
+        holder.ProductPrice.setText("$ " + ShoppingCartList.get(position).getPrice());
 
-        //holder.ProductImage.setImageResource(R.drawable.ic_launcher_background);
-        //holder.ProductImage.setImageResource(FilteredProductsList.get(position).getImageCode);
         ImageURL = ShoppingCartList.get(position).getImageCode();
         if (ImageURL.isEmpty())
         {
@@ -60,7 +58,7 @@ public class ShoppingCardAdapter extends RecyclerView.Adapter<ShoppingCardAdapte
             Glide.with(holder.itemView).load(ImageURL).into(holder.ProductImage);
         }
 
-        holder.ProductCardVIew.setOnClickListener(new View.OnClickListener()
+        holder.ItemCardVIew.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -80,35 +78,23 @@ public class ShoppingCardAdapter extends RecyclerView.Adapter<ShoppingCardAdapte
                 startActivity(v.getContext(), IntentProductDetails, Bundle.EMPTY);
             }
         });
-        /*
-        holder.ProductImage.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Intent IntentProductDetails = new Intent(v.getContext(), ProductDetailsActivity.class);
-                startActivity(v.getContext(), IntentProductDetails, Bundle.EMPTY);
-            }
-        });
-        */
-
     }
 
     @Override
     public int getItemCount() { return ShoppingCartList.size(); }
 
-    public class ProductViewHolder extends RecyclerView.ViewHolder
+    public class ItemsViewHolder extends RecyclerView.ViewHolder
     {
-        CardView ProductCardVIew;
+        CardView ItemCardVIew;
         ImageView ProductImage;
         TextView ProductName;
         TextView ProductDescription;
         TextView ProductPrice;
 
-        public ProductViewHolder(@NonNull View itemView)
+        public ItemsViewHolder(@NonNull View itemView)
         {
             super(itemView);
-            ProductCardVIew = (CardView) itemView.findViewById(R.id.product_card2);
+            ItemCardVIew = (CardView) itemView.findViewById(R.id.product_card2);
             ProductImage = (ImageView) itemView.findViewById(R.id.imgCard2);
             ProductName = (TextView) itemView.findViewById(R.id.txtvCard4);
             ProductDescription = (TextView) itemView.findViewById(R.id.txtvCard5);

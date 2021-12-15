@@ -8,11 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -26,45 +25,45 @@ import java.util.List;
 
 public class ShoppingCartActivity extends AppCompatActivity
 {
-    //android.content.Context Context3;
+    android.content.Context Context3;
     FirebaseFirestore DB_PANTHER;
     //Map<String, Object> DOCTOLOAD;
     String TAG;
 
-    List<VGProduct> ShoppingCartList;
-
     TextView TxtvCountProducts;
-    RecyclerView RV_ProductsList;
+    RecyclerView RV_CartList;
     Spinner SpinStates, SpinTowns;
     //EditText DeliveryAddress;
     Button BtnBuy;
+
+    List<VGProduct> ShoppingCartList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
-        getSupportActionBar().hide();
 
-        ShoppingCartList = new ArrayList<>();
-        //   ------- AQUÍ SE DESENCADENA UN ERROR -------
-        // Problemas para traer ShoppingCartList a ShoppingCartActivity
-        // ShoppingCartList = (List<VGProduct>) getIntent().getSerializableExtra("ShoppingCart");
+        Bundle data = getIntent().getExtras();
         DB_PANTHER = FirebaseFirestore.getInstance();
-        StartProductsList();
-
-        RV_ProductsList = (RecyclerView) findViewById(R.id.recyclervList2);
-        //RV_ProductsList.setHasFixedSize(true);
-        //LinearLayoutManager layoutManager = new LinearLayoutManager(Context3);
-        RV_ProductsList.setLayoutManager(new GridLayoutManager(ShoppingCartActivity.this, 1));
-        ShoppingCardAdapter Adapter = new ShoppingCardAdapter(ShoppingCartActivity.this, ShoppingCartList);
-        RV_ProductsList.setAdapter(Adapter);
 
         TxtvCountProducts = (TextView) findViewById(R.id.txtvCountProducts2);
-        //DeliveryAddress = (EditText) findViewById(R.id.etxtDeliveryAddress);
+
+        RV_CartList = (RecyclerView) findViewById(R.id.recyclervList2);
+        RV_CartList.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(Context3);
+        RV_CartList.setLayoutManager(layoutManager);
+
+        ShoppingCartList = new ArrayList<>();
+        // ShoppingCartList = (List<VGProduct>) getIntent().getSerializableExtra("ShoppingCart");
+        ShoppingCartList = (List<VGProduct>) data.getSerializable("ShoppingCart");
+
+        //StartProductsList();
+        TxtvCountProducts.setText("" + ShoppingCartList.size());
+        StartShoppingCartAdapter();
 
         SpinStates = (Spinner) findViewById(R.id.spinStates);
-        REFRESH_STATES_SPIN(SpinStates);
+        START_STATES_SPIN(SpinStates);
         SpinStates.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
@@ -77,6 +76,8 @@ public class ShoppingCartActivity extends AppCompatActivity
         });
 
         SpinTowns = (Spinner) findViewById(R.id.spinTowns);
+        //DeliveryAddress = (EditText) findViewById(R.id.etxtDeliveryAddress);
+
         BtnBuy = (Button) findViewById(R.id.btnBuy);
         BtnBuy.setOnClickListener(new View.OnClickListener()
         {
@@ -114,16 +115,12 @@ public class ShoppingCartActivity extends AppCompatActivity
                                 i,false));
                         i++;
                     }
-                    Toast.makeText(getApplicationContext(),
-                            ShoppingCartList.size() + " Products",Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(getApplicationContext(), ShoppingCartList.size() + " Products",Toast.LENGTH_SHORT).show();
                 }
             });
-        //   ------- AQUÍ SE DESENCADENA UN ERROR -------
-        //ShoppingCardAdapter Adapter = new ShoppingCardAdapter(ShoppingCartActivity.this , ShoppingCartList);
-        //RV_ProductsList.setAdapter(Adapter);
     }
 
-    private void REFRESH_STATES_SPIN(View view)
+    private void START_STATES_SPIN(View view)
     {
         List<String> ARRAYTOLIST = new ArrayList<String>();
         DB_PANTHER.collection("STATES").orderBy("STATE").get()
@@ -165,7 +162,7 @@ public class ShoppingCartActivity extends AppCompatActivity
                 {
                     for (QueryDocumentSnapshot DOC : queryDocuments)
                     {
-                        //ARRAYTOLIST.add(DOC.get("IDTOWN") + ": " + DOC.get("TOWN") + " - " + DOC.get("STATE"));
+                        // ARRAYTOLIST.add(DOC.get("IDTOWN") + ": " + DOC.get("TOWN") + " - " + DOC.get("STATE"));
                         ARRAYTOLIST.add("" +  DOC.get("TOWN"));
                     }
                     String DATATOLIST[] = ARRAYTOLIST.toArray(new String[ARRAYTOLIST.size()]);
@@ -173,7 +170,7 @@ public class ShoppingCartActivity extends AppCompatActivity
                             android.R.layout.simple_spinner_item, DATATOLIST);
                     ADAPTER.setDropDownViewResource(android.R.layout.simple_spinner_item);
                     SpinTowns.setAdapter(ADAPTER);
-                    Toast.makeText(view.getContext(), ARRAYTOLIST.size() + " Towns", Toast.LENGTH_LONG).show();
+                    // Toast.makeText(view.getContext(), ARRAYTOLIST.size() + " Towns", Toast.LENGTH_LONG).show();
                 }
             })
             .addOnFailureListener(new OnFailureListener()
@@ -184,6 +181,13 @@ public class ShoppingCartActivity extends AppCompatActivity
 
                 }
             });
+    }
+
+    private void StartShoppingCartAdapter()
+    {
+        ShoppingCartAdapter Adapter = new ShoppingCartAdapter(ShoppingCartActivity.this,
+                ShoppingCartList);
+        RV_CartList.setAdapter(Adapter);
     }
 
 }

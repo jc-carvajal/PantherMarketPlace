@@ -1,6 +1,8 @@
 package com.pchronos.septimaappjava;
 
-public class VGProduct
+import java.io.Serializable;
+
+public class VGProduct implements Serializable
 {
     private int IdProduct;
     private int CategoryId;

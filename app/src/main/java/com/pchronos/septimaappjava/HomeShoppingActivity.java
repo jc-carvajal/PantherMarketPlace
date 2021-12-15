@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +23,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomePurchaseActivity extends AppCompatActivity
+public class HomeShoppingActivity extends AppCompatActivity
 {
     android.content.Context Context;
     FirebaseFirestore DB_PANTHER;
@@ -44,14 +43,12 @@ public class HomePurchaseActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_purchase);
+        setContentView(R.layout.activity_home_shopping);
 
         DB_PANTHER = FirebaseFirestore.getInstance();
-        TxtvCountProducts = (TextView) findViewById(R.id.txtvCountProducts);
-        BtnShoppingCart = (Button) findViewById(R.id.btnShoppingCart);
 
         SpinCategories = (Spinner) findViewById(R.id.spin_categories);
-        REFRESH_CATEGORIES_LIST(SpinCategories);
+        START_CATEGORIES_LIST(SpinCategories);
         SpinCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
@@ -72,9 +69,12 @@ public class HomePurchaseActivity extends AppCompatActivity
 
         StartProductsList();
         StartProductsAdapter();
+
+        TxtvCountProducts = (TextView) findViewById(R.id.txtvCountProducts);
+        BtnShoppingCart = (Button) findViewById(R.id.btnShoppingCart);
     }
 
-    private void REFRESH_CATEGORIES_LIST(View view)
+    private void START_CATEGORIES_LIST(View view)
     {
         List<String> ARRAYTOLIST = new ArrayList<>();
         DB_PANTHER.collection("CATEGORIES").orderBy("IDCATEGORY").get()
@@ -133,13 +133,6 @@ public class HomePurchaseActivity extends AppCompatActivity
                                 i,false));
                         i++;
                     }
-                    /*
-                    Toast toast=Toast.makeText(getApplicationContext(),"",Toast.LENGTH_SHORT);
-                    toast.setText(ProductsList.size() + " Products");
-                    toast.setGravity(TOP,0,0);
-                    toast.show();
-                    */
-                    Toast.makeText(getApplicationContext(),ProductsList.size() + " Products",Toast.LENGTH_SHORT).show();
                 }
             });
         FilteredProductsList = ProductsList;
@@ -194,7 +187,7 @@ public class HomePurchaseActivity extends AppCompatActivity
 
     private void StartProductsAdapter()
     {
-        ProductCardAdapter Adapter = new ProductCardAdapter(HomePurchaseActivity.this,
+        ProductCardAdapter Adapter = new ProductCardAdapter(HomeShoppingActivity.this,
                 TxtvCountProducts, BtnShoppingCart,
                 ProductsList, FilteredProductsList, ShoppingCartList);
         RV_ProductsList.setAdapter(Adapter);
