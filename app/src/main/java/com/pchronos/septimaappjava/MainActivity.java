@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.op2nav:
                 //T1.setText("Comprar");
-                Intent CH=new Intent(this, HomePurchaseActivity.class);
+                Intent CH=new Intent(this, HomeShoppingActivity.class);
                 startActivity(CH);
                 break;
 

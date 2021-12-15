@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.ProductViewHolder>
@@ -78,18 +79,18 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                int i = holder.getAdapterPosition();
-                int j = FilteredProductsList.get(i).getPosition();
-                boolean Added = ProductsList.get(j).isInShoppingCart();
+                int filterIndex = holder.getAdapterPosition();
+                int i = FilteredProductsList.get(filterIndex).getPosition();
+                boolean Added = ProductsList.get(i).isInShoppingCart();
                 if (!Added && holder.InShoppingCart.isChecked())
                 {
-                    ProductsList.get(j).setInShoppingCart(true);
-                    ShoppingCartList.add(ProductsList.get(j));
+                    ProductsList.get(i).setInShoppingCart(true);
+                    ShoppingCartList.add(ProductsList.get(i));
                 }
                 else if (Added && !holder.InShoppingCart.isChecked())
                 {
-                    ProductsList.get(j).setInShoppingCart(false);
-                    ShoppingCartList.remove(ProductsList.get(j));
+                    ProductsList.get(i).setInShoppingCart(false);
+                    ShoppingCartList.remove(ProductsList.get(i));
                 }
                 TxtvCountProducts.setText(""+ShoppingCartList.size());
             }
@@ -100,7 +101,8 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
             @Override
             public void onClick(View v)
             {
-                int i = holder.getAdapterPosition();
+                int filterIndex = holder.getAdapterPosition();
+                int i = FilteredProductsList.get(filterIndex).getPosition();
                 Intent IntentProductDetails = new Intent(v.getContext(), ProductDetailsActivity.class);
 
                 IntentProductDetails.putExtra("ProductId", ProductsList.get(i).getIdProduct());
@@ -134,12 +136,10 @@ public class ProductCardAdapter extends RecyclerView.Adapter<ProductCardAdapter.
             {
                 // Toast.makeText(v.getContext(), "View Shopping Cart", Toast.LENGTH_SHORT).show();
                 Intent IntentShoppingCart = new Intent(context2, ShoppingCartActivity.class);
-                // Problemas para pasar ShoppingCartList a ShoppingCartActivity
-                // IntentShoppingCart.putExtra("ShoppingCart", (Serializable) ShoppingCartList);
+                IntentShoppingCart.putExtra("ShoppingCart", (Serializable) ShoppingCartList);
                 context2.startActivity(IntentShoppingCart);
             }
         });
-
     }
 
     @Override
